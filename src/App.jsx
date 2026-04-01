@@ -833,7 +833,18 @@ export default function BookingApp() {
     try {
       const snap = await getDoc(doc(db, "bookings", bid));
       if (snap.exists()) {
-        setAct({ id: snap.id, ...snap.data() });
+        const data = { id: snap.id, ...snap.data() };
+        // Auto-populate options for stops with mode set but no options loaded
+        if (data.stops) {
+          data.stops = data.stops.map(s => {
+            if (s.mode && (!s.accomOptions || s.accomOptions.length === 0)) {
+              const dbSource = s.mode === "camping" ? CAMPSITES : PROPERTIES;
+              return { ...s, accomOptions: (dbSource[s.name] || []).map(p => ({ ...p })) };
+            }
+            return s;
+          });
+        }
+        setAct(data);
         setView("guest");
       } else {
         setView("login");
