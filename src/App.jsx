@@ -165,6 +165,135 @@ const PROPERTIES = {
   ],
 };
 
+const CAMPSITES = {
+  "Rainbow Beach & Inskip": [
+    { name:"Inskip Peninsula (MV Sarawak)", type:"QPWS",ppn:0, desc:"Free bush camp, toilets, barge departure point" },
+    { name:"Inskip Peninsula (SS Dorrigo)", type:"QPWS",ppn:0, desc:"Free bush camp, toilets" },
+  ],
+  "Southern K'gari": [
+    { name:"Central Station", type:"QPWS",ppn:7, desc:"Flush toilets, showers, fenced, dingo-safe" },
+    { name:"Lake McKenzie (Boorangoora)", type:"QPWS",ppn:7, desc:"Walk to lake, toilets, fenced" },
+  ],
+  "75 Mile Beach": [
+    { name:"Dundubara", type:"QPWS",ppn:7, desc:"Flush toilets, showers, fenced, fire rings" },
+    { name:"Eli Creek", type:"QPWS",ppn:7, desc:"East coast, near Eli Creek" },
+  ],
+  "Northern K'gari": [
+    { name:"Waddy Point", type:"QPWS",ppn:7, desc:"Flush toilets, showers, fenced, beachfront, fire rings" },
+    { name:"Wathumba", type:"QPWS",ppn:7, desc:"Remote west coast, toilets" },
+  ],
+  "Hervey Bay (optional)": [
+    { name:"Hervey Bay Caravan Parks", type:"Caravan Park",ppn:45, desc:"Multiple options, powered sites" },
+  ],
+  "Cairns": [
+    { name:"Ellis Beach Oceanfront", type:"Caravan Park",ppn:55, desc:"Beachfront, toilets, showers" },
+    { name:"Cairns Holiday Park", type:"Caravan Park",ppn:50, desc:"Central, pool, camp kitchen" },
+  ],
+  "Cairns (return)": [
+    { name:"Ellis Beach Oceanfront", type:"Caravan Park",ppn:55, desc:"Beachfront, showers" },
+  ],
+  "Port Douglas & Mossman Gorge": [
+    { name:"Wonga Beach Camping", type:"QPWS",ppn:7, desc:"Composting toilets, beachside" },
+    { name:"Port Douglas Caravan Park", type:"Caravan Park",ppn:50, desc:"Central, powered" },
+  ],
+  "Daintree Rainforest": [
+    { name:"Daintree Riverview Caravan Park", type:"Caravan Park",ppn:45, desc:"Toilets, showers, riverside" },
+  ],
+  "Cape Tribulation": [
+    { name:"Noah Beach", type:"QPWS",ppn:7, desc:"Composting toilets, 15 sites, book ahead" },
+    { name:"Cape Trib Camping", type:"Caravan Park",ppn:40, desc:"Rainforest setting, showers" },
+  ],
+  "Atherton Tablelands": [
+    { name:"Lake Tinaroo — Downfall Creek", type:"QPWS",ppn:7, desc:"Toilets, lakeside" },
+  ],
+  "Bundaberg & 1770": [
+    { name:"1770 Camping Ground", type:"Caravan Park",ppn:40, desc:"Toilets, showers, near beach" },
+  ],
+  "1770 & Agnes Water": [
+    { name:"1770 Camping Ground", type:"Caravan Park",ppn:40, desc:"Toilets, showers" },
+  ],
+  "Yeppoon": [
+    { name:"Farnborough Beach Caravan Park", type:"Caravan Park",ppn:45, desc:"Beachfront, showers" },
+  ],
+  "Yeppoon & Capricorn Coast": [
+    { name:"Farnborough Beach Caravan Park", type:"Caravan Park",ppn:45, desc:"Beachfront, showers" },
+  ],
+  "Cape Hillsborough": [
+    { name:"Cape Hillsborough Nature Tourist Park", type:"Caravan Park",ppn:45, desc:"Beachfront, kangaroo sunrise" },
+  ],
+  "Mackay": [
+    { name:"Mackay Caravan Parks", type:"Caravan Park",ppn:40, desc:"Multiple options" },
+  ],
+  "Airlie Beach": [
+    { name:"BIG4 Adventure Whitsunday", type:"Caravan Park",ppn:55, desc:"Toilets, showers, pool" },
+  ],
+  "Airlie Beach & Whitsundays": [
+    { name:"BIG4 Adventure Whitsunday", type:"Caravan Park",ppn:55, desc:"Toilets, showers, pool" },
+  ],
+  "Townsville & Magnetic Island": [
+    { name:"Rowes Bay Caravan Park", type:"Caravan Park",ppn:45, desc:"Beachfront, showers" },
+  ],
+  "Mission Beach": [
+    { name:"Beachcomber Coconut Village", type:"Caravan Park",ppn:45, desc:"Beachfront, showers" },
+  ],
+  "Toowoomba": [
+    { name:"Toowoomba Showgrounds", type:"Caravan Park",ppn:35, desc:"Central, basic facilities" },
+  ],
+  "Roma": [
+    { name:"Big Rig Tourist Park", type:"Caravan Park",ppn:40, desc:"Toilets, showers, near Big Rig" },
+  ],
+  "Mitchell & Charleville": [
+    { name:"Charleville Bush Caravan Park", type:"Caravan Park",ppn:35, desc:"Toilets, showers" },
+  ],
+  "Blackall": [
+    { name:"Blackall Caravan Park", type:"Caravan Park",ppn:35, desc:"Toilets, showers" },
+  ],
+  "Longreach": [
+    { name:"Longreach Tourist Park", type:"Caravan Park",ppn:40, desc:"Toilets, showers, pool, camp kitchen" },
+  ],
+  "Longreach (return)": [
+    { name:"Longreach Tourist Park", type:"Caravan Park",ppn:40, desc:"Toilets, showers, pool" },
+  ],
+  "Winton": [
+    { name:"Pelican Waters Caravan Park", type:"Caravan Park",ppn:35, desc:"Toilets, showers, pool" },
+    { name:"Bladensburg NP — Bough Shed Hole", type:"QPWS",ppn:7, desc:"Toilets, bush camping" },
+  ],
+  "Carnarvon Gorge": [
+    { name:"Breeze Holiday Parks Carnarvon Gorge", type:"Caravan Park",ppn:45, desc:"Toilets, showers, camp kitchen, bush bar" },
+  ],
+  "Rubyvale & Gemfields": [
+    { name:"Rubyvale Gem Caravan Park", type:"Caravan Park",ppn:35, desc:"Near fossicking, showers" },
+  ],
+  "Emerald & Gemfields": [
+    { name:"Emerald Caravan Parks", type:"Caravan Park",ppn:35, desc:"Multiple options" },
+  ],
+  "Rockhampton": [
+    { name:"Rockhampton Caravan Parks", type:"Caravan Park",ppn:40, desc:"Multiple options" },
+  ],
+  "Agnes Water & Bundaberg": [
+    { name:"1770 Camping Ground", type:"Caravan Park",ppn:40, desc:"Toilets, showers" },
+  ],
+  "Byron Bay": [
+    { name:"First Sun Holiday Park", type:"Caravan Park",ppn:65, desc:"Toilets, showers, pool, central" },
+    { name:"Suffolk Park Caravan Park", type:"Caravan Park",ppn:55, desc:"Near Tallow Beach" },
+  ],
+  "Ballina & Air Force Beach": [
+    { name:"Ballina Caravan Parks", type:"Caravan Park",ppn:45, desc:"Multiple options" },
+  ],
+  "Yamba": [
+    { name:"Yamba Caravan Parks", type:"Caravan Park",ppn:45, desc:"Near Main Beach" },
+  ],
+  "Newcastle": [
+    { name:"Stockton Beach Holiday Park", type:"Caravan Park",ppn:50, desc:"Near beach, showers" },
+  ],
+  "Stockton Beach & Port Stephens": [
+    { name:"Port Stephens Caravan Parks", type:"Caravan Park",ppn:50, desc:"Multiple options, near beach" },
+  ],
+  "Hunter Valley": [
+    { name:"Hunter Valley Caravan Parks", type:"Caravan Park",ppn:45, desc:"Vineyard region" },
+  ],
+};
+
 const PACKAGES = {
   kgari: { name:"K'gari Experience", days:5, db:300, stops:["Rainbow Beach & Inskip","Southern K'gari","75 Mile Beach","Northern K'gari","Hervey Bay (optional)"] },
   "tropical-north": { name:"Tropical North", days:7, db:1050, stops:["Cairns","Port Douglas & Mossman Gorge","Daintree Rainforest","Cape Tribulation","Atherton Tablelands","Cairns (return)"] },
@@ -183,6 +312,11 @@ const RATE=1200, BOND=7500;
 const GUESTS=["1 adult","2 adults (couple)","3 adults","4 adults","1 adult + 1 child","1 adult + 2 children","1 adult + 3 children","2 adults + 1 child","2 adults + 2 children","2 adults + 3 children"];
 
 const visaCalc = b => {
+  if (b.visaFuelOverride !== undefined || b.visaDiningOverride !== undefined) {
+    const fuel = b.visaFuelOverride ?? 1000;
+    const dining = b.visaDiningOverride ?? 0;
+    return { fuel, dining, total: fuel + dining };
+  }
   const pk=PACKAGES[b.packageId];
   const tn=b.stops.filter(s=>s.mode==="touring").reduce((a,s)=>a+s.nights,0);
   const an=b.stops.reduce((a,s)=>a+s.nights,0);
@@ -305,7 +439,7 @@ export default function BookingApp() {
     const pk = PACKAGES[b.packageId] || { name: "Custom", days: b.totalDays, db: 0 };
     const v = visaCalc(b);
     const q = { days: b.totalDays, sub: b.totalDays * RATE, sup: b.supplements || 0, total: b.totalDays * RATE + (b.supplements || 0) };
-    const tStops = b.stops.filter(s => s.mode === "touring" && s.accomOptions.length > 0);
+    const tStops = b.stops.filter(s => s.accomOptions.length > 0);
     const allSel = tStops.length > 0 && tStops.every(s => s.selectedAccom);
 
     const selAccom = async (si, val) => {
@@ -364,21 +498,24 @@ export default function BookingApp() {
                       background:stop.mode==="camping"?`${tl}12`:`${tr}12`,color:stop.mode==="camping"?tl:tr}}>{stop.mode}</span>
                   </div>
                 </div>
-                {stop.mode === "touring" && stop.accomOptions.length > 0 && !confirmed && (
+                {stop.accomOptions.length > 0 && !confirmed && (
                   <div style={{marginTop:12}}>
-                    <label style={{fontSize:10,fontWeight:700,letterSpacing:1.5,textTransform:"uppercase",color:gd,marginBottom:6,display:"block"}}>Select your accommodation</label>
+                    <label style={{fontSize:10,fontWeight:700,letterSpacing:1.5,textTransform:"uppercase",color:stop.mode==="camping"?tl:gd,marginBottom:6,display:"block"}}>
+                      {stop.mode==="camping"?"Select your campsite":"Select your accommodation"}
+                    </label>
                     <select value={stop.selectedAccom || ""} onChange={e => selAccom(si, e.target.value)}
-                      style={{...S.sl,borderColor:stop.selectedAccom?gd:bd,fontSize:13}}>
+                      style={{...S.sl,borderColor:stop.selectedAccom?(stop.mode==="camping"?tl:gd):bd,fontSize:13}}>
                       <option value="">Choose...</option>
                       {stop.accomOptions.map((opt, ai) => (
-                        <option key={ai} value={opt.name}>{opt.name} — {opt.type} — ${opt.ppn}/night</option>
+                        <option key={ai} value={opt.name}>{opt.name} — {opt.type}{opt.ppn>0?` — $${opt.ppn}/night`:""}</option>
                       ))}
                     </select>
                     {sel && <p style={{fontSize:12,color:md,marginTop:6,fontStyle:"italic"}}>{sel.desc}</p>}
                   </div>
                 )}
-                {stop.mode === "touring" && stop.selectedAccom && confirmed && (
-                  <div style={{marginTop:10,padding:"14px 18px",background:`${gd}08`,border:`1px solid ${gd}30`,borderRadius:6}}>
+                {stop.selectedAccom && confirmed && (
+                  <div style={{marginTop:10,padding:"14px 18px",background:stop.mode==="camping"?`${tl}08`:`${gd}08`,
+                    border:`1px solid ${stop.mode==="camping"?`${tl}30`:`${gd}30`}`,borderRadius:6}}>
                     <div style={{fontFamily:sf,fontSize:16,fontWeight:500,color:dk}}>{stop.selectedAccom}</div>
                     {sel && <div style={{fontSize:12,color:lt,marginTop:2}}>{sel.desc}</div>}
                   </div>
@@ -394,7 +531,7 @@ export default function BookingApp() {
               <span style={{fontSize:13,color:md}}>{q.days} days × $1,200/day</span><span style={{fontSize:13,fontWeight:600}}>${q.sub.toLocaleString()}</span>
             </div>
             {q.sup > 0 && <div style={{display:"flex",justifyContent:"space-between",padding:"8px 0",borderBottom:`1px solid ${bd}`}}>
-              <span style={{fontSize:13,color:md}}>Supplements</span><span style={{fontSize:13,fontWeight:600}}>${q.sup.toLocaleString()}</span>
+              <span style={{fontSize:13,color:md}}>Ultra-luxury upgrades</span><span style={{fontSize:13,fontWeight:600}}>${q.sup.toLocaleString()}</span>
             </div>}
             <div style={{display:"flex",justifyContent:"space-between",padding:"12px 0",marginTop:4}}>
               <span style={{fontFamily:sf,fontSize:18,fontWeight:500}}>Package Total</span>
@@ -486,7 +623,7 @@ export default function BookingApp() {
           {!confirmed && b.status === "sent" && (
             <button onClick={confirmSel} disabled={!allSel || sending}
               style={{...S.bt,...(allSel && !sending ? S.bp : S.bh),width:"100%",padding:"16px",opacity:allSel && !sending?1:0.5}}>
-              {sending ? "Sending..." : allSel ? "Confirm My Selections" : "Please select accommodation at each touring stop"}
+              {sending ? "Sending..." : allSel ? "Confirm My Selections" : "Please select your campsite or accommodation at each stop"}
             </button>
           )}
           {(confirmed || b.status === "confirmed") && (
@@ -591,14 +728,17 @@ export default function BookingApp() {
         if (idx !== i) return s;
         const u = { ...s, [f]: val };
         if (f === "mode" && val === "touring" && s.accomOptions.length === 0) u.accomOptions = (PROPERTIES[s.name] || []).map(p => ({ ...p }));
-        if (f === "mode" && val === "camping") { u.accomOptions = []; u.selectedAccom = null; }
+        if (f === "mode" && val === "camping") { u.accomOptions = (CAMPSITES[s.name] || []).map(p => ({ ...p })); u.selectedAccom = null; }
+        if (f === "mode" && val === "touring") { u.selectedAccom = null; }
         return u;
       });
       updBk({ ...b, stops: ns });
     };
 
-    const addFromDb = (si, name) => {
-      const stop = b.stops[si], prop = (PROPERTIES[stop.name] || []).find(p => p.name === name);
+    const addFromDb = (si, name, mode) => {
+      const stop = b.stops[si];
+      const dbSource = mode === "camping" ? CAMPSITES : PROPERTIES;
+      const prop = (dbSource[stop.name] || []).find(p => p.name === name);
       if (!prop || stop.accomOptions.find(o => o.name === name)) return;
       updBk({...b, stops: b.stops.map((s, i) => i === si ? { ...s, accomOptions: [...s.accomOptions, { ...prop }] } : s)});
     };
@@ -680,7 +820,8 @@ export default function BookingApp() {
                 style={{...S.bt,...S.bh,padding:"8px 16px",fontSize:10}}>+ Add Stop</button>
             </div>
             {b.stops.map((stop, si) => {
-              const avail = PROPERTIES[stop.name] || [];
+              const dbSource = stop.mode === "camping" ? CAMPSITES : PROPERTIES;
+              const avail = dbSource[stop.name] || [];
               const added = stop.accomOptions.map(o => o.name);
               const unadded = avail.filter(p => !added.includes(p.name));
               return (
@@ -705,16 +846,27 @@ export default function BookingApp() {
                     </div>
                   )}
 
-                  {stop.mode === "touring" && (
-                    <div style={{marginTop:12,paddingLeft:16,borderLeft:`2px solid ${tr}20`}}>
+                  {stop.mode==="camping" && stop.selectedAccom && (
+                    <div style={{marginTop:10,padding:"10px 16px",background:`${tl}08`,borderRadius:6,borderLeft:`3px solid ${tl}`}}>
+                      <span style={{fontSize:10,fontWeight:700,letterSpacing:1.5,textTransform:"uppercase",color:tl}}>Guest selected: </span>
+                      <span style={{fontFamily:sf,fontSize:15,fontWeight:500}}>{stop.selectedAccom}</span>
+                      {(()=>{const s=stop.accomOptions.find(o=>o.name===stop.selectedAccom);return s&&s.ppn>0?<span style={{fontSize:12,color:md}}> · ${s.ppn}/n × {stop.nights}n = ${s.ppn*stop.nights}</span>:null})()}
+                    </div>
+                  )}
+
+                  {/* Options for both modes */}
+                  {(stop.mode === "touring" || stop.mode === "camping") && (
+                    <div style={{marginTop:12,paddingLeft:16,borderLeft:`2px solid ${stop.mode==="touring"?tr:tl}20`}}>
                       <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}}>
-                        <span style={{fontSize:10,fontWeight:700,letterSpacing:1.5,textTransform:"uppercase",color:tr}}>Guest Options ({stop.accomOptions.length})</span>
+                        <span style={{fontSize:10,fontWeight:700,letterSpacing:1.5,textTransform:"uppercase",color:stop.mode==="touring"?tr:tl}}>
+                          {stop.mode==="touring"?"Accommodation":"Campsite"} Options ({stop.accomOptions.length})
+                        </span>
                         <div style={{display:"flex",gap:8}}>
                           {unadded.length > 0 && (
-                            <select onChange={e=>{if(e.target.value){addFromDb(si,e.target.value);e.target.value=""}}}
+                            <select onChange={e=>{if(e.target.value){addFromDb(si,e.target.value,stop.mode);e.target.value=""}}}
                               style={{padding:"6px 10px",borderRadius:4,border:`1px solid ${bd}`,fontSize:11,color:md,cursor:"pointer"}}>
                               <option value="">+ From database</option>
-                              {unadded.map((p,i)=><option key={i} value={p.name}>{p.name} — ${p.ppn}/n</option>)}
+                              {unadded.map((p,i)=><option key={i} value={p.name}>{p.name}{p.ppn>0?` — $${p.ppn}/n`:""}</option>)}
                             </select>
                           )}
                           <button onClick={()=>addCustom(si)} style={{fontSize:10,fontWeight:600,color:gd,background:"none",border:`1px solid ${gd}40`,borderRadius:4,padding:"6px 12px",cursor:"pointer"}}>+ Custom</button>
@@ -722,7 +874,7 @@ export default function BookingApp() {
                       </div>
                       {stop.accomOptions.map((opt,ai)=>(
                         <div key={ai} style={{display:"grid",gridTemplateColumns:"2fr 1fr 2fr 80px 40px",gap:8,marginBottom:8,alignItems:"end"}}>
-                          <div><label style={{...S.lb,fontSize:9}}>Property</label><input style={{...S.ip,padding:"10px 12px",fontSize:12}} value={opt.name} onChange={e=>updAccom(si,ai,"name",e.target.value)}/></div>
+                          <div><label style={{...S.lb,fontSize:9}}>Name</label><input style={{...S.ip,padding:"10px 12px",fontSize:12}} value={opt.name} onChange={e=>updAccom(si,ai,"name",e.target.value)}/></div>
                           <div><label style={{...S.lb,fontSize:9}}>Type</label><input style={{...S.ip,padding:"10px 12px",fontSize:12}} value={opt.type} onChange={e=>updAccom(si,ai,"type",e.target.value)}/></div>
                           <div><label style={{...S.lb,fontSize:9}}>Desc</label><input style={{...S.ip,padding:"10px 12px",fontSize:12}} value={opt.desc} onChange={e=>updAccom(si,ai,"desc",e.target.value)}/></div>
                           <div><label style={{...S.lb,fontSize:9}}>$/Night</label><input type="number" style={{...S.ip,padding:"10px 12px",fontSize:12}} value={opt.ppn} onChange={e=>updAccom(si,ai,"ppn",parseInt(e.target.value)||0)}/></div>
@@ -736,12 +888,29 @@ export default function BookingApp() {
             })}
           </div>
 
-          {/* Supplements */}
+          {/* Admin Controls — Visa, Bond, Ultra-Luxury */}
           <div style={{...S.cd,marginBottom:20}}>
-            <div style={{display:"grid",gridTemplateColumns:"1fr 2fr",gap:14}}>
-              <div><label style={S.lb}>Supplements ($)</label><input type="number" style={S.ip} value={b.supplements} onChange={e=>upd("supplements",parseInt(e.target.value)||0)}/></div>
-              <div><label style={S.lb}>Notes</label><input style={S.ip} value={b.notes} onChange={e=>upd("notes",e.target.value)} placeholder="Internal notes"/></div>
+            <h2 style={{fontFamily:sf,fontSize:22,fontWeight:500,marginBottom:16}}>Admin Controls</h2>
+            <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:14}}>
+              <div><label style={S.lb}>Visa — Fuel ($)</label>
+                <input type="number" style={S.ip} value={b.visaFuelOverride ?? ""} placeholder="Auto: $1,000"
+                  onChange={e=>upd("visaFuelOverride",e.target.value?parseInt(e.target.value):undefined)}/></div>
+              <div><label style={S.lb}>Visa — Dining ($)</label>
+                <input type="number" style={S.ip} value={b.visaDiningOverride ?? ""} placeholder={`Auto: $${visaCalc({...b,visaFuelOverride:undefined,visaDiningOverride:undefined}).dining}`}
+                  onChange={e=>upd("visaDiningOverride",e.target.value?parseInt(e.target.value):undefined)}/></div>
+              <div><label style={S.lb}>Bond Amount ($)</label>
+                <input type="number" style={S.ip} value={b.bondOverride ?? ""} placeholder="Default: $7,500"
+                  onChange={e=>upd("bondOverride",e.target.value?parseInt(e.target.value):undefined)}/></div>
             </div>
+            <div style={{display:"grid",gridTemplateColumns:"1fr 2fr",gap:14,marginTop:14}}>
+              <div><label style={S.lb}>Ultra-Luxury Supplements ($)</label>
+                <input type="number" style={S.ip} value={b.supplements} onChange={e=>upd("supplements",parseInt(e.target.value)||0)}/></div>
+              <div><label style={S.lb}>Notes</label>
+                <input style={S.ip} value={b.notes} onChange={e=>upd("notes",e.target.value)} placeholder="Internal notes"/></div>
+            </div>
+            {(b.visaFuelOverride !== undefined || b.visaDiningOverride !== undefined || b.bondOverride !== undefined) && (
+              <p style={{fontSize:11,color:gd,marginTop:10,fontStyle:"italic"}}>Manual overrides active — clear fields to return to auto-calculated values</p>
+            )}
           </div>
 
           {/* Quote & Visa */}
@@ -749,20 +918,26 @@ export default function BookingApp() {
             <div style={S.cd}>
               <h3 style={{fontFamily:sf,fontSize:20,fontWeight:500,marginBottom:12}}>Quote</h3>
               <div style={{display:"flex",justifyContent:"space-between",padding:"6px 0"}}><span style={{fontSize:13,color:md}}>{q.days}d × $1,200</span><span style={{fontSize:13,fontWeight:600}}>${q.sub.toLocaleString()}</span></div>
-              {q.sup>0 && <div style={{display:"flex",justifyContent:"space-between",padding:"6px 0"}}><span style={{fontSize:13,color:md}}>Supplements</span><span style={{fontSize:13,fontWeight:600}}>${q.sup.toLocaleString()}</span></div>}
+              {q.sup>0 && <div style={{display:"flex",justifyContent:"space-between",padding:"6px 0"}}><span style={{fontSize:13,color:md}}>Ultra-luxury supplements</span><span style={{fontSize:13,fontWeight:600}}>${q.sup.toLocaleString()}</span></div>}
               <div style={{display:"flex",justifyContent:"space-between",padding:"10px 0",marginTop:6,borderTop:`1px solid ${bd}`}}>
                 <span style={{fontFamily:sf,fontSize:18,fontWeight:500}}>Total</span><span style={{fontFamily:sf,fontSize:18,fontWeight:600}}>${q.total.toLocaleString()}</span>
               </div>
               <div style={{marginTop:12,padding:"10px 14px",background:sd,borderRadius:4}}>
-                <div style={{fontSize:11,color:md}}>Bond: <strong>$7,500</strong></div>
-                <div style={{fontSize:11,color:md}}>Assurance: ${Math.min(38*q.days,380)} (bond → $5,000)</div>
-                <div style={{fontSize:11,color:md}}>Complete: ${Math.min(55*q.days,550)} (bond → $3,500)</div>
+                <div style={{fontSize:11,color:md}}>Bond: <strong>${(b.bondOverride ?? 7500).toLocaleString()}</strong>{b.bondOverride !== undefined && <span style={{color:gd}}> (override)</span>}</div>
+                <div style={{fontSize:11,color:md}}>Assurance: ${Math.min(38*q.days,380)} (bond → ${(b.bondOverride ? Math.round(b.bondOverride*0.67) : 5000).toLocaleString()})</div>
+                <div style={{fontSize:11,color:md}}>Complete: ${Math.min(55*q.days,550)} (bond → ${(b.bondOverride ? Math.round(b.bondOverride*0.47) : 3500).toLocaleString()})</div>
               </div>
             </div>
             <div style={{...S.cd,borderLeft:`3px solid ${gd}`}}>
               <h3 style={{fontSize:10,fontWeight:700,letterSpacing:2,textTransform:"uppercase",color:gd,marginBottom:12}}>Visa Pre-load</h3>
-              <div style={{display:"flex",justifyContent:"space-between",padding:"6px 0"}}><span style={{fontSize:13,color:md}}>Fuel</span><span>${v.fuel.toLocaleString()}</span></div>
-              <div style={{display:"flex",justifyContent:"space-between",padding:"6px 0"}}><span style={{fontSize:13,color:md}}>Dining</span><span>${v.dining.toLocaleString()}</span></div>
+              <div style={{display:"flex",justifyContent:"space-between",padding:"6px 0"}}>
+                <span style={{fontSize:13,color:md}}>Fuel{b.visaFuelOverride!==undefined?<span style={{color:gd}}> (override)</span>:""}</span>
+                <span>${v.fuel.toLocaleString()}</span>
+              </div>
+              <div style={{display:"flex",justifyContent:"space-between",padding:"6px 0"}}>
+                <span style={{fontSize:13,color:md}}>Dining{b.visaDiningOverride!==undefined?<span style={{color:gd}}> (override)</span>:""}</span>
+                <span>${v.dining.toLocaleString()}</span>
+              </div>
               <div style={{display:"flex",justifyContent:"space-between",padding:"10px 0",marginTop:6,borderTop:`1px solid ${bd}`}}>
                 <span style={{fontWeight:600}}>Total</span><span style={{fontWeight:600,color:gd}}>${v.total.toLocaleString()}</span>
               </div>
