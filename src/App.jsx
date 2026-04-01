@@ -752,7 +752,7 @@ const PACKAGES = {
   custom: { name:"Custom Journey", days:7, db:0, stops:[] },
 };
 
-const RATE=1200, BOND=7500, ACCOM_CAP=550;
+const RATE=1200, BOND=7500, ACCOM_CAP=450;
 const GUESTS=["1 adult","2 adults (couple)","3 adults","4 adults","1 adult + 1 child","1 adult + 2 children","1 adult + 3 children","2 adults + 1 child","2 adults + 2 children","2 adults + 3 children"];
 
 const visaCalc = b => {
@@ -992,7 +992,7 @@ export default function BookingApp() {
                       style={{...S.sl,borderColor:stop.selectedAccom?(stop.mode==="camping"?tl:gd):bd,fontSize:13}}>
                       <option value="">Choose...</option>
                       {stop.accomOptions.map((opt, ai) => (
-                        <option key={ai} value={opt.name}>{opt.name}{opt.ppn>550?` (+$${opt.ppn-550}/night upgrade)`:""}</option>
+                        <option key={ai} value={opt.name}>{opt.name}{opt.ppn>450?` (+$${opt.ppn-450}/night upgrade)`:""}</option>
                       ))}
                     </select>
                     {sel && <p style={{fontSize:12,color:md,marginTop:6,fontStyle:"italic"}}>{sel.desc}</p>}
