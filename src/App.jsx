@@ -500,7 +500,7 @@ export default function BookingApp() {
           <div style={{textAlign:"center",marginBottom:40}}>
             <p style={{fontSize:10,fontWeight:700,letterSpacing:3,textTransform:"uppercase",color:gd,marginBottom:10}}>Your Trip</p>
             <h1 style={{fontFamily:sf,fontSize:36,fontWeight:400,color:dk,marginBottom:8}}>{pk.name}</h1>
-            <p style={{fontSize:14,color:lt}}>{b.guestName} \u00b7 {b.totalDays} days \u00b7 {b.guestCount}</p>
+            <p style={{fontSize:14,color:lt}}>{b.guestName} · {b.totalDays} days · {b.guestCount}</p>
             {b.startDate && <p style={{fontSize:13,color:lt,marginTop:4}}>Starting {b.startDate}</p>}
           </div>
 
@@ -516,7 +516,7 @@ export default function BookingApp() {
                   <span style={{fontSize:11,color:lt}}>{stop.nights} night{stop.nights>1?"s":""}</span>
                 </div>
 
-                {!confirmed && b.status==="sent" && (
+                {!confirmed && b.status!=="confirmed" && (
                   <div style={{marginBottom:10}}>
                     <label style={{fontSize:10,fontWeight:700,letterSpacing:1.5,textTransform:"uppercase",color:md,marginBottom:6,display:"block"}}>Mode</label>
                     <div style={{display:"flex",gap:8}}>
@@ -538,7 +538,7 @@ export default function BookingApp() {
                     background:stop.mode==="camping"?`${tl}12`:`${tr}12`,color:stop.mode==="camping"?tl:tr}}>{stop.mode}</span>
                 )}
 
-                {stop.mode && stop.accomOptions.length > 0 && !confirmed && b.status==="sent" && (
+                {stop.mode && stop.accomOptions.length > 0 && !confirmed && b.status!=="confirmed" && (
                   <div style={{marginTop:6}}>
                     <label style={{fontSize:10,fontWeight:700,letterSpacing:1.5,textTransform:"uppercase",
                       color:stop.mode==="camping"?tl:gd,marginBottom:6,display:"block"}}>
@@ -548,7 +548,7 @@ export default function BookingApp() {
                       style={{...S.sl,borderColor:stop.selectedAccom?(stop.mode==="camping"?tl:gd):bd,fontSize:13}}>
                       <option value="">Choose...</option>
                       {stop.accomOptions.map((opt, ai) => (
-                        <option key={ai} value={opt.name}>{opt.name} \u2014 {opt.type}{opt.ppn>0?` \u2014 $${opt.ppn}/night`:""}</option>
+                        <option key={ai} value={opt.name}>{opt.name} — {opt.type}{opt.ppn>0?` — $${opt.ppn}/night`:""}</option>
                       ))}
                     </select>
                     {sel && <p style={{fontSize:12,color:md,marginTop:6,fontStyle:"italic"}}>{sel.desc}</p>}
@@ -567,14 +567,14 @@ export default function BookingApp() {
             );
           })}
 
-          {!confirmed && b.status==="sent" && (
+          {!confirmed && b.status!=="confirmed" && (
             <div style={{...S.cd,marginBottom:24}}>
               <h3 style={{fontSize:10,fontWeight:700,letterSpacing:2,textTransform:"uppercase",color:dk,marginBottom:4}}>Security Bond</h3>
               <p style={{fontSize:12,color:lt,marginBottom:16}}>A bond is charged at handover and fully refunded on return. You can reduce it with Peace of Mind Cover:</p>
               {[
                 {id:"none",label:"Standard Bond",detail:"$7,500 fully refundable",cost:"Included"},
-                {id:"assurance",label:"Peace of Mind \u2014 Assurance",detail:"Bond reduced to $5,000",cost:`+$${Math.min(38*b.totalDays,380)}`},
-                {id:"complete",label:"Peace of Mind \u2014 Complete",detail:"Bond reduced to $3,500",cost:`+$${Math.min(55*b.totalDays,550)}`},
+                {id:"assurance",label:"Peace of Mind — Assurance",detail:"Bond reduced to $5,000",cost:`+$${Math.min(38*b.totalDays,380)}`},
+                {id:"complete",label:"Peace of Mind — Complete",detail:"Bond reduced to $3,500",cost:`+$${Math.min(55*b.totalDays,550)}`},
               ].map(opt=>(
                 <div key={opt.id} onClick={()=>updGuest("bondOption",opt.id)}
                   style={{padding:"14px 18px",borderRadius:6,marginBottom:8,cursor:"pointer",transition:"all .2s",
@@ -592,13 +592,13 @@ export default function BookingApp() {
             </div>
           )}
 
-          {!confirmed && b.status==="sent" && (b.guestCount||"").includes("child") && (
+          {!confirmed && b.status!=="confirmed" && (b.guestCount||"").includes("child") && (
             <div style={{...S.cd,marginBottom:24}}>
-              <h3 style={{fontSize:10,fontWeight:700,letterSpacing:2,textTransform:"uppercase",color:dk,marginBottom:4}}>Children\u2019s Equipment</h3>
+              <h3 style={{fontSize:10,fontWeight:700,letterSpacing:2,textTransform:"uppercase",color:dk,marginBottom:4}}>Children's Equipment</h3>
               <p style={{fontSize:12,color:lt,marginBottom:16}}>Select any equipment you need:</p>
               {[
                 {k:"childSeats",label:"Child seats / booster seats",desc:"Arranged via Kidsafe QLD"},
-                {k:"childCutlery",label:"Children\u2019s cutlery & dining sets",desc:"Sea to Summit Delta Camp Sets"},
+                {k:"childCutlery",label:"Children's cutlery & dining sets",desc:"Sea to Summit Delta Camp Sets"},
                 {k:"bottleKit",label:"Toddler dining & bottle kit",desc:"b.box + Milton steriliser"},
               ].map(item=>(
                 <label key={item.k} onClick={()=>updGuest(item.k,!b[item.k])}
@@ -606,7 +606,7 @@ export default function BookingApp() {
                     border:b[item.k]?`2px solid ${gd}`:`1px solid ${bd}`,background:b[item.k]?`${gd}08`:"#fff",transition:"all .2s"}}>
                   <div style={{width:20,height:20,borderRadius:4,flexShrink:0,marginTop:2,display:"flex",alignItems:"center",justifyContent:"center",
                     border:b[item.k]?`2px solid ${gd}`:`2px solid ${bd}`,background:b[item.k]?gd:"#fff"}}>
-                    {b[item.k] && <span style={{color:"#fff",fontSize:12,fontWeight:700}}>\u2713</span>}
+                    {b[item.k] && <span style={{color:"#fff",fontSize:12,fontWeight:700}}>✓</span>}
                   </div>
                   <div>
                     <div style={{fontFamily:sf,fontSize:15,fontWeight:500,color:dk}}>{item.label}</div>
@@ -621,13 +621,13 @@ export default function BookingApp() {
             <h2 style={{fontFamily:sf,fontSize:22,fontWeight:500,marginBottom:4}}>Package Summary</h2>
             <div style={S.dv}/>
             <div style={{display:"flex",justifyContent:"space-between",padding:"8px 0",borderBottom:`1px solid ${bd}`}}>
-              <span style={{fontSize:13,color:md}}>{q.days} days \u00d7 $1,200/day</span><span style={{fontSize:13,fontWeight:600}}>${q.sub.toLocaleString()}</span>
+              <span style={{fontSize:13,color:md}}>{q.days} days × $1,200/day</span><span style={{fontSize:13,fontWeight:600}}>${q.sub.toLocaleString()}</span>
             </div>
             {q.sup > 0 && <div style={{display:"flex",justifyContent:"space-between",padding:"8px 0",borderBottom:`1px solid ${bd}`}}>
               <span style={{fontSize:13,color:md}}>Ultra-luxury upgrades</span><span style={{fontSize:13,fontWeight:600}}>${q.sup.toLocaleString()}</span>
             </div>}
             {pomCostCalc > 0 && <div style={{display:"flex",justifyContent:"space-between",padding:"8px 0",borderBottom:`1px solid ${bd}`}}>
-              <span style={{fontSize:13,color:gd}}>Peace of Mind \u2014 {(b.bondOption||"none")==="assurance"?"Assurance":"Complete"}</span>
+              <span style={{fontSize:13,color:gd}}>Peace of Mind — {(b.bondOption||"none")==="assurance"?"Assurance":"Complete"}</span>
               <span style={{fontSize:13,fontWeight:600,color:gd}}>${pomCostCalc.toLocaleString()}</span>
             </div>}
             <div style={{display:"flex",justifyContent:"space-between",padding:"12px 0",marginTop:4}}>
@@ -647,13 +647,13 @@ export default function BookingApp() {
 
           {(confirmed || b.status === "confirmed") && (
             <div style={{textAlign:"center",padding:"24px",background:`${gd}08`,borderRadius:8,border:`1px solid ${gd}30`}}>
-              <div style={{fontFamily:sf,fontSize:24,color:gd,marginBottom:8}}>\u2713</div>
+              <div style={{fontFamily:sf,fontSize:24,color:gd,marginBottom:8}}>✓</div>
               <p style={{fontFamily:sf,fontSize:18,color:dk}}>Selections sent to Southern Horizon Co.</p>
               <p style={{fontSize:13,color:lt,marginTop:4}}>Troy or Jess will be in touch with your final booking details within 24 hours.</p>
             </div>
           )}
 
-          {!confirmed && b.status === "sent" && (
+          {!confirmed && b.status !== "confirmed" && (
             <button onClick={confirmSel} disabled={!allStopsSelected || sending}
               style={{...S.bt,...(allStopsSelected && !sending ? S.bp : S.bh),width:"100%",padding:"16px",
                 opacity:allStopsSelected && !sending?1:0.5,cursor:allStopsSelected && !sending?"pointer":"not-allowed"}}>
