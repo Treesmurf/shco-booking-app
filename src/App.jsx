@@ -756,16 +756,27 @@ const RATE=1200, BOND=7500, ACCOM_CAP=450;
 const GUESTS=["1 adult","2 adults (couple)","3 adults","4 adults","1 adult + 1 child","1 adult + 2 children","1 adult + 3 children","2 adults + 1 child","2 adults + 2 children","2 adults + 3 children"];
 
 const visaCalc = b => {
+  const touringNights = b.stops.filter(s=>s.mode==="touring").reduce((a,s)=>a+s.nights,0);
+  const autoFuel = 1000;
+  const autoDining = touringNights * 200;
   if (b.visaFuelOverride !== undefined || b.visaDiningOverride !== undefined) {
-    const fuel = b.visaFuelOverride ?? 1000;
-    const dining = b.visaDiningOverride ?? 0;
+    const fuel = b.visaFuelOverride ?? autoFuel;
+    const dining = b.visaDiningOverride ?? autoDining;
     return { fuel, dining, total: fuel + dining };
   }
-  const pk=PACKAGES[b.packageId];
-  const tn=b.stops.filter(s=>s.mode==="touring").reduce((a,s)=>a+s.nights,0);
-  const an=b.stops.reduce((a,s)=>a+s.nights,0);
-  const d=an>0?Math.round((pk?.db||0)*tn/an/50)*50:0;
-  return { fuel:1000, dining:d, total:1000+d };
+  return { fuel:autoFuel, dining:autoDining, total:autoFuel+autoDining };
+};
+
+const accomSupCalc = b => {
+  return b.stops.reduce((total, s) => {
+    if (s.selectedAccom && s.accomOptions) {
+      const opt = s.accomOptions.find(o => o.name === s.selectedAccom);
+      if (opt && opt.ppn > ACCOM_CAP) {
+        total += (opt.ppn - ACCOM_CAP) * s.nights;
+      }
+    }
+    return total;
+  }, 0);
 };
 
 /* STYLES */
@@ -883,7 +894,8 @@ export default function BookingApp() {
     const pk = PACKAGES[b.packageId] || { name: "Custom", days: b.totalDays, db: 0 };
     const v = visaCalc(b);
     const pomCostCalc = (b.bondOption||"none")==="assurance"?Math.min(38*b.totalDays,380):(b.bondOption||"none")==="complete"?Math.min(55*b.totalDays,550):0;
-    const q = { days: b.totalDays, sub: b.totalDays * RATE, sup: b.supplements || 0, total: b.totalDays * RATE + (b.supplements || 0) };
+    const accomSup = accomSupCalc(b);
+    const q = { days: b.totalDays, sub: b.totalDays * RATE, sup: b.supplements || 0, accom: accomSup, total: b.totalDays * RATE + (b.supplements || 0) + accomSup };
     const allStopsSelected = b.stops.every(s => s.mode && s.selectedAccom);
 
     const selMode = async (si, mode) => {
@@ -1070,6 +1082,9 @@ export default function BookingApp() {
             {q.sup > 0 && <div style={{display:"flex",justifyContent:"space-between",padding:"8px 0",borderBottom:`1px solid ${bd}`}}>
               <span style={{fontSize:13,color:md}}>Ultra-luxury upgrades</span><span style={{fontSize:13,fontWeight:600}}>${q.sup.toLocaleString()}</span>
             </div>}
+            {q.accom > 0 && <div style={{display:"flex",justifyContent:"space-between",padding:"8px 0",borderBottom:`1px solid ${bd}`}}>
+              <span style={{fontSize:13,color:tr}}>Accommodation upgrades</span><span style={{fontSize:13,fontWeight:600,color:tr}}>${q.accom.toLocaleString()}</span>
+            </div>}
             {pomCostCalc > 0 && <div style={{display:"flex",justifyContent:"space-between",padding:"8px 0",borderBottom:`1px solid ${bd}`}}>
               <span style={{fontSize:13,color:gd}}>Peace of Mind — {(b.bondOption||"none")==="assurance"?"Assurance":"Complete"}</span>
               <span style={{fontSize:13,fontWeight:600,color:gd}}>${pomCostCalc.toLocaleString()}</span>
@@ -1151,7 +1166,7 @@ export default function BookingApp() {
           <div style={{display:"flex",flexDirection:"column",gap:12}}>
             {bks.map(b => {
               const pk = PACKAGES[b.packageId];
-              const qtotal = b.totalDays * RATE + (b.supplements || 0);
+              const qtotal = b.totalDays * RATE + (b.supplements || 0) + accomSupCalc(b);
               const picks = b.stops?.filter(s => s.mode === "touring" && s.selectedAccom).length || 0;
               const tTotal = b.stops?.filter(s => s.mode === "touring" && s.accomOptions?.length > 0).length || 0;
               return (
@@ -1186,7 +1201,8 @@ export default function BookingApp() {
   if (view === "edit" && act) {
     const b = act, pk = PACKAGES[b.packageId], v = visaCalc(b);
     const pomCost = (b.bondOption||"none")==="assurance"?Math.min(38*b.totalDays,380):(b.bondOption||"none")==="complete"?Math.min(55*b.totalDays,550):0;
-    const q = { days:b.totalDays, sub:b.totalDays*RATE, sup:b.supplements||0, pom:pomCost, total:b.totalDays*RATE+(b.supplements||0)+pomCost };
+    const accomSup = accomSupCalc(b);
+    const q = { days:b.totalDays, sub:b.totalDays*RATE, sup:b.supplements||0, pom:pomCost, accom:accomSup, total:b.totalDays*RATE+(b.supplements||0)+pomCost+accomSup };
     const upd = (f, val) => updBk({ ...b, [f]: val });
 
     const chgPkg = pid => {
@@ -1395,7 +1411,7 @@ export default function BookingApp() {
                 <input type="number" style={S.ip} value={b.visaFuelOverride ?? ""} placeholder="Auto: $1,000"
                   onChange={e=>upd("visaFuelOverride",e.target.value?parseInt(e.target.value):undefined)}/></div>
               <div><label style={S.lb}>Visa — Dining ($)</label>
-                <input type="number" style={S.ip} value={b.visaDiningOverride ?? ""} placeholder={`Auto: $${visaCalc({...b,visaFuelOverride:undefined,visaDiningOverride:undefined}).dining}`}
+                <input type="number" style={S.ip} value={b.visaDiningOverride ?? ""} placeholder={`Auto: $${b.stops.filter(s=>s.mode==="touring").reduce((a,s)=>a+s.nights,0) * 200} ($200/day × touring nights)`}
                   onChange={e=>upd("visaDiningOverride",e.target.value?parseInt(e.target.value):undefined)}/></div>
               <div><label style={S.lb}>Peace of Mind</label>
                 <select style={{...S.sl,borderColor:(b.bondOption&&b.bondOption!=="none")?gd:bd,color:(b.bondOption&&b.bondOption!=="none")?gd:dk}}
@@ -1419,6 +1435,7 @@ export default function BookingApp() {
               <h3 style={{fontFamily:sf,fontSize:20,fontWeight:500,marginBottom:12}}>Quote</h3>
               <div style={{display:"flex",justifyContent:"space-between",padding:"6px 0"}}><span style={{fontSize:13,color:md}}>{q.days}d × $1,200</span><span style={{fontSize:13,fontWeight:600}}>${q.sub.toLocaleString()}</span></div>
               {q.sup>0 && <div style={{display:"flex",justifyContent:"space-between",padding:"6px 0"}}><span style={{fontSize:13,color:md}}>Ultra-luxury supplements</span><span style={{fontSize:13,fontWeight:600}}>${q.sup.toLocaleString()}</span></div>}
+              {q.accom>0 && <div style={{display:"flex",justifyContent:"space-between",padding:"6px 0"}}><span style={{fontSize:13,color:tr}}>Accommodation upgrades</span><span style={{fontSize:13,fontWeight:600,color:tr}}>${q.accom.toLocaleString()}</span></div>}
               {q.pom>0 && <div style={{display:"flex",justifyContent:"space-between",padding:"6px 0"}}><span style={{fontSize:13,color:gd}}>Peace of Mind — {(b.bondOption||"none")==="assurance"?"Assurance":"Complete"}</span><span style={{fontSize:13,fontWeight:600,color:gd}}>${q.pom.toLocaleString()}</span></div>}
               <div style={{display:"flex",justifyContent:"space-between",padding:"10px 0",marginTop:6,borderTop:`1px solid ${bd}`}}>
                 <span style={{fontFamily:sf,fontSize:18,fontWeight:500}}>Total</span><span style={{fontFamily:sf,fontSize:18,fontWeight:600}}>${q.total.toLocaleString()}</span>
