@@ -318,29 +318,25 @@ export default function BookingApp() {
 
     const confirmSel = async () => {
       setSending(true);
-      // Update status in Firestore
-      await updateDoc(doc(db, "bookings", b.id), { status: "confirmed", stops: b.stops });
-      // Email notification via Web3Forms
-      const selections = b.stops.filter(s => s.selectedAccom).map(s => {
-        const opt = s.accomOptions.find(o => o.name === s.selectedAccom);
-        return `${s.name}: ${s.selectedAccom} ($${opt?.ppn || 0}/night x ${s.nights}n)`;
-      }).join("\n");
-      try {
-        await fetch("https://api.web3forms.com/submit", {
-          method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" },
-          body: JSON.stringify({
-            access_key: "97ccfeb1-d44e-4773-bcbe-d2ad854bf675",
-            subject: `SHCo Booking Confirmed — ${b.guestName} — ${pk.name}`,
-            from_name: "SHCo Booking App",
-            "Booking ID": b.id, Guest: b.guestName, Email: b.guestEmail,
-            Package: pk.name, Days: b.totalDays,
-            "Accommodation Selections": selections,
-          }),
-        });
-      } catch {}
+      await updateDoc(doc(db, "bookings", b.id), {
+        status: "confirmed", stops: b.stops,
+        bondOption: b.bondOption || "none",
+        childSeats: b.childSeats || false,
+        childCutlery: b.childCutlery || false,
+        bottleKit: b.bottleKit || false,
+      });
       setConfirmed(true);
       setSending(false);
     };
+
+    const updGuest = async (field, val) => {
+      const updated = { ...b, [field]: val };
+      setAct(updated);
+      await updateDoc(doc(db, "bookings", b.id), { [field]: val });
+    };
+
+    const bondCost = b.bondOption === "assurance" ? Math.min(38 * b.totalDays, 380) : b.bondOption === "complete" ? Math.min(55 * b.totalDays, 550) : 0;
+    const bondReduced = b.bondOption === "assurance" ? 5000 : b.bondOption === "complete" ? 3500 : 7500;
 
     return (
       <div style={S.pg}><style>{fonts}</style>
@@ -414,6 +410,78 @@ export default function BookingApp() {
               <span style={{fontWeight:600}}>Total loaded</span><span style={{fontWeight:600,color:gd}}>${v.total.toLocaleString()}</span>
             </div>
           </div>
+
+          {/* Bond / Peace of Mind */}
+          {!confirmed && b.status === "sent" && (
+            <div style={{...S.cd,marginBottom:24}}>
+              <h3 style={{fontSize:10,fontWeight:700,letterSpacing:2,textTransform:"uppercase",color:dk,marginBottom:4}}>Security Bond</h3>
+              <p style={{fontSize:12,color:lt,marginBottom:16}}>A $7,500 bond is charged at handover and fully refunded on return. You can reduce it with Peace of Mind Cover:</p>
+              {[
+                {id:"none",label:"Standard Bond",detail:"$7,500 fully refundable",cost:"No extra cost"},
+                {id:"assurance",label:"Peace of Mind — Assurance",detail:`Bond reduced to $5,000`,cost:`$${Math.min(38*b.totalDays,380)} ($38/day, capped at $380)`},
+                {id:"complete",label:"Peace of Mind — Complete",detail:`Bond reduced to $3,500`,cost:`$${Math.min(55*b.totalDays,550)} ($55/day, capped at $550)`},
+              ].map(opt=>(
+                <div key={opt.id} onClick={()=>updGuest("bondOption",opt.id)}
+                  style={{padding:"14px 18px",borderRadius:6,marginBottom:8,cursor:"pointer",transition:"all .2s",
+                    border:(b.bondOption||"none")===opt.id?`2px solid ${gd}`:`1px solid ${bd}`,
+                    background:(b.bondOption||"none")===opt.id?`${gd}08`:"#fff"}}>
+                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                    <div>
+                      <div style={{fontFamily:sf,fontSize:15,fontWeight:500,color:dk}}>{opt.label}</div>
+                      <div style={{fontSize:12,color:lt,marginTop:2}}>{opt.detail}</div>
+                    </div>
+                    <div style={{fontSize:12,fontWeight:600,color:(b.bondOption||"none")===opt.id?gd:md}}>{opt.cost}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Child Equipment */}
+          {!confirmed && b.status === "sent" && (b.guestCount||"").includes("child") && (
+            <div style={{...S.cd,marginBottom:24}}>
+              <h3 style={{fontSize:10,fontWeight:700,letterSpacing:2,textTransform:"uppercase",color:dk,marginBottom:4}}>Children's Equipment</h3>
+              <p style={{fontSize:12,color:lt,marginBottom:16}}>Select any equipment you need for your trip:</p>
+              {[
+                {k:"childSeats",label:"Child seats / booster seats",desc:"Arranged via Kidsafe QLD — tell us ages and we'll have the right seats ready"},
+                {k:"childCutlery",label:"Children's cutlery & dining sets",desc:"Sea to Summit Delta Camp Sets (plate, bowl, mug, cutlery)"},
+                {k:"bottleKit",label:"Toddler dining & bottle kit",desc:"b.box BPA-free dining sets, Milton travel steriliser & tablets, bottle brushes"},
+              ].map(item=>(
+                <label key={item.k} onClick={()=>updGuest(item.k,!b[item.k])}
+                  style={{display:"flex",gap:12,alignItems:"flex-start",cursor:"pointer",padding:"12px 16px",borderRadius:6,marginBottom:8,
+                    border:b[item.k]?`2px solid ${gd}`:`1px solid ${bd}`,background:b[item.k]?`${gd}08`:"#fff",transition:"all .2s"}}>
+                  <div style={{width:20,height:20,borderRadius:4,flexShrink:0,marginTop:2,display:"flex",alignItems:"center",justifyContent:"center",
+                    border:b[item.k]?`2px solid ${gd}`:`2px solid ${bd}`,background:b[item.k]?gd:"#fff"}}>
+                    {b[item.k] && <span style={{color:"#fff",fontSize:12,fontWeight:700}}>✓</span>}
+                  </div>
+                  <div>
+                    <div style={{fontFamily:sf,fontSize:15,fontWeight:500,color:dk}}>{item.label}</div>
+                    <div style={{fontSize:12,color:lt,marginTop:2}}>{item.desc}</div>
+                  </div>
+                </label>
+              ))}
+            </div>
+          )}
+
+          {/* Confirmed selections summary */}
+          {(confirmed || b.status === "confirmed") && (b.bondOption || b.childSeats || b.childCutlery || b.bottleKit) && (
+            <div style={{...S.cd,marginBottom:24}}>
+              {b.bondOption && b.bondOption !== "none" && (
+                <div style={{marginBottom:12}}>
+                  <span style={{fontSize:10,fontWeight:700,letterSpacing:1.5,textTransform:"uppercase",color:gd}}>Peace of Mind: </span>
+                  <span style={{fontFamily:sf,fontSize:15,fontWeight:500,color:dk}}>{b.bondOption === "assurance" ? "Assurance — bond $5,000" : "Complete — bond $3,500"}</span>
+                </div>
+              )}
+              {(b.childSeats || b.childCutlery || b.bottleKit) && (
+                <div>
+                  <span style={{fontSize:10,fontWeight:700,letterSpacing:1.5,textTransform:"uppercase",color:gd}}>Children's Equipment: </span>
+                  <span style={{fontSize:13,color:dk}}>
+                    {[b.childSeats&&"Child seats",b.childCutlery&&"Cutlery sets",b.bottleKit&&"Toddler kit"].filter(Boolean).join(", ")}
+                  </span>
+                </div>
+              )}
+            </div>
+          )}
 
           {!confirmed && b.status === "sent" && (
             <button onClick={confirmSel} disabled={!allSel || sending}
