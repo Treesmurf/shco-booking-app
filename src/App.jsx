@@ -784,13 +784,40 @@ export default function BookingApp() {
         </div>
 
         <div style={{maxWidth:900,margin:"0 auto",padding:"32px 24px 80px"}}>
-          {/* Enquiry message if from website */}
-          {b.status === "enquiry" && b.message && (
+          {/* Enquiry details from website */}
+          {b.status === "enquiry" && (
             <div style={{...S.cd,marginBottom:20,borderLeft:`3px solid #E65100`,background:"#FFF3E0"}}>
               <h3 style={{fontSize:10,fontWeight:700,letterSpacing:2,textTransform:"uppercase",color:"#E65100",marginBottom:8}}>Website Enquiry</h3>
+              {b.dates && <p style={{fontSize:12,color:md}}>Preferred dates: <strong>{b.dates}</strong></p>}
+              {b.duration && <p style={{fontSize:12,color:md}}>Duration: <strong>{b.duration}</strong></p>}
               {b.dietary && <p style={{fontSize:12,color:md}}>Dietary: {b.dietary}</p>}
-              {b.specialNeeds && <p style={{fontSize:12,color:md}}>Special needs: {b.specialNeeds}</p>}
-              <p style={{fontSize:13,color:dk,marginTop:6}}>{b.message}</p>
+              {b.specialNeeds && <p style={{fontSize:12,color:md}}>Special requirements: <strong style={{color:dk}}>{b.specialNeeds}</strong></p>}
+              {(b.childSeats || b.childCutlery || b.bottleKit) && (
+                <div style={{marginTop:6}}>
+                  <span style={{fontSize:12,color:md}}>Children's equipment requested: </span>
+                  <strong style={{fontSize:12,color:dk}}>
+                    {[b.childSeats&&"Child seats",b.childCutlery&&"Cutlery sets",b.bottleKit&&"Toddler bottle kit"].filter(Boolean).join(", ")}
+                  </strong>
+                </div>
+              )}
+              {b.message && <p style={{fontSize:13,color:dk,marginTop:8,padding:"10px 14px",background:"rgba(255,255,255,0.6)",borderRadius:6}}>"{b.message}"</p>}
+            </div>
+          )}
+
+          {/* Show special needs & child equipment for all statuses (not just enquiry) */}
+          {b.status !== "enquiry" && (b.specialNeeds || b.childSeats || b.childCutlery || b.bottleKit) && (
+            <div style={{...S.cd,marginBottom:20,borderLeft:`3px solid ${gd}`}}>
+              <h3 style={{fontSize:10,fontWeight:700,letterSpacing:2,textTransform:"uppercase",color:gd,marginBottom:8}}>Guest Requirements</h3>
+              {b.specialNeeds && <p style={{fontSize:12,color:md}}>Special requirements: <strong style={{color:dk}}>{b.specialNeeds}</strong></p>}
+              {b.dietary && <p style={{fontSize:12,color:md}}>Dietary: {b.dietary}</p>}
+              {(b.childSeats || b.childCutlery || b.bottleKit) && (
+                <div style={{marginTop:4}}>
+                  <span style={{fontSize:12,color:md}}>Children's equipment: </span>
+                  <strong style={{fontSize:12,color:dk}}>
+                    {[b.childSeats&&"Child seats",b.childCutlery&&"Cutlery sets",b.bottleKit&&"Toddler bottle kit"].filter(Boolean).join(", ")}
+                  </strong>
+                </div>
+              )}
             </div>
           )}
 
