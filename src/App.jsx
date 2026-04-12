@@ -917,7 +917,7 @@ export default function BookingApp() {
                               <div style={{fontSize:12,color:lt,marginTop:3,lineHeight:1.5}}>{opt.desc}</div>
                             </div>
                             <div style={{display:"flex",alignItems:"center",gap:12}}>
-                              <span style={{fontSize:12,fontWeight:700,color:gd,whiteSpace:"nowrap"}}>+${opt.ppn - ACCOM_CAP}/night</span>
+                              <span style={{fontSize:11,fontWeight:600,color:gd,whiteSpace:"nowrap"}}>Upgrade available</span>
                               <div style={{width:22,height:22,borderRadius:12,flexShrink:0,display:"flex",alignItems:"center",justifyContent:"center",
                                 border:sel===opt.name?`2px solid ${gd}`:`2px solid ${gd}60`,background:sel===opt.name?gd:"#fff",transition:"all .2s"}}>
                                 {sel===opt.name && <span style={{color:"#fff",fontSize:11,fontWeight:700}}>✓</span>}
@@ -934,7 +934,7 @@ export default function BookingApp() {
                   <div style={{padding:"16px 20px",borderRadius:10,background:`${gd}06`,border:`1px solid ${gd}30`}}>
                     <div style={{fontFamily:sf,fontSize:16,fontWeight:500,color:dk}}>{selOpt?.type || sel}</div>
                     {selOpt && <div style={{fontSize:12,color:lt,marginTop:3}}>{selOpt.desc}</div>}
-                    {selOpt && selOpt.ppn > ACCOM_CAP && <div style={{fontSize:12,fontWeight:600,color:gd,marginTop:4}}>Premium upgrade +${selOpt.ppn - ACCOM_CAP}/night</div>}
+                    {selOpt && selOpt.ppn > ACCOM_CAP && <div style={{fontSize:12,fontWeight:600,color:gd,marginTop:4}}>Premium upgrade</div>}
                   </div>
                 )}
 
