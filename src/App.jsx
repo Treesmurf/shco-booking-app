@@ -840,7 +840,11 @@ export default function BookingApp() {
           const best = incRooms.reduce((a, b) => b.ppn > a.ppn ? b : a);
           included.push(best);
         }
-        upgRooms.forEach(r => upgrades.push(r));
+        // Best upgrade room = highest ppn (show one per property)
+        if (upgRooms.length > 0) {
+          const best = upgRooms.reduce((a, b) => b.ppn > a.ppn ? b : a);
+          upgrades.push(best);
+        }
       });
       return { included, upgrades };
     };
@@ -1019,7 +1023,7 @@ export default function BookingApp() {
               <span style={{fontFamily:sf,fontSize:20,fontWeight:500,color:dk}}>Total</span>
               <span style={{fontFamily:sf,fontSize:20,fontWeight:600,color:dk}}>${(q.total + pomCostCalc).toLocaleString()}</span>
             </div>
-            <p style={{fontSize:11,color:lt,marginTop:4,lineHeight:1.5}}>Includes Lexus LX500d, luxury accommodation, breakfast & dinner at curated restaurants, fuel, Starlink, and 24/7 support.</p>
+            <p style={{fontSize:11,color:lt,marginTop:4,lineHeight:1.5}}>Includes Lexus LX500d Overtrail, luxury accommodation with breakfast, fuel card, curated route & dining guide, Starlink, and personal concierge support.</p>
           </div>
 
           {/* Confirmed */}
@@ -1110,7 +1114,7 @@ export default function BookingApp() {
                   </div>
                   <div style={{textAlign:"right"}}>
                     <div style={{fontFamily:sf,fontSize:20,fontWeight:500}}>${qtotal.toLocaleString()}</div>
-                    <div style={{fontSize:11,color:lt}}>Visa: ${visaCalc(b).total.toLocaleString()}</div>
+
                   </div>
                 </div>
               );
