@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { db } from "./firebase.js";
+import { db, auth } from "./firebase.js";
 import { collection, doc, getDoc, getDocs, setDoc, updateDoc, deleteDoc, query, orderBy } from "firebase/firestore";
+import { signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
 
 /* ════════════════════════════════════════════════════════════════
    PROPERTY DATABASE
@@ -682,23 +683,61 @@ export default function BookingApp() {
   const [view, setView] = useState("loading");
   const [bks, setBks] = useState([]);
   const [act, setAct] = useState(null);
+  const [email, setEmail] = useState("");
   const [pw, setPw] = useState("");
-  const [ae, setAe] = useState(false);
+  const [ae, setAe] = useState("");
   const [sending, setSending] = useState(false);
   const [confirmed, setConfirmed] = useState(false);
   const [copied, setCopied] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [user, setUser] = useState(null);
 
-  // On mount: check for guest booking ID in URL
+  // On mount: check for guest booking ID in URL, or check auth state for admin
   useEffect(() => {
     const p = new URLSearchParams(window.location.search);
     const bid = p.get("booking");
     if (bid) {
       loadGuestBooking(bid);
-    } else {
-      setView("login");
+      return;
     }
+    // Listen for auth state changes (persists across page refreshes)
+    const unsub = onAuthStateChanged(auth, (u) => {
+      if (u) {
+        setUser(u);
+        setView("dashboard");
+        // Defer to next tick so loadAllBookings is in scope
+        setTimeout(() => loadAllBookings(), 0);
+      } else {
+        setUser(null);
+        setView("login");
+      }
+    });
+    return () => unsub();
   }, []);
+
+  // Sign in handler
+  const handleSignIn = async () => {
+    setAe("");
+    try {
+      await signInWithEmailAndPassword(auth, email, pw);
+      // onAuthStateChanged handles view switch + loading bookings
+    } catch (err) {
+      if (err.code === "auth/invalid-credential" || err.code === "auth/wrong-password" || err.code === "auth/user-not-found") {
+        setAe("Incorrect email or password");
+      } else if (err.code === "auth/too-many-requests") {
+        setAe("Too many attempts. Try again later.");
+      } else {
+        setAe("Sign-in failed: " + err.code);
+      }
+    }
+  };
+
+  const handleSignOut = async () => {
+    await signOut(auth);
+    setEmail("");
+    setPw("");
+    // onAuthStateChanged handles view switch to login
+  };
 
   // Load single booking for guest
   const loadGuestBooking = async (bid) => {
@@ -1062,12 +1101,15 @@ export default function BookingApp() {
       <style>{fonts}</style>
       <div style={{maxWidth:400,width:"100%",textAlign:"center",background:"rgba(255,253,248,0.95)",backdropFilter:"blur(20px)",borderRadius:12,padding:"56px 40px",boxShadow:"0 24px 64px rgba(0,0,0,0.15)"}}>
         <span style={{fontFamily:sf,fontSize:28,fontWeight:400,color:dk}}>Southern Horizon</span><span style={S.co}>Co.</span>
-        <div style={S.dv}/><p style={{fontSize:13,color:lt,margin:"16px 0 28px"}}>Booking Manager</p>
-        <input type="password" placeholder="Password" value={pw} onChange={e=>{setPw(e.target.value);setAe(false)}}
-          onKeyDown={e=>{if(e.key==="Enter"){if(pw==="shco2027"){setView("dashboard");loadAllBookings();setAe(false)}else setAe(true)}}}
-          style={{...S.ip,textAlign:"center",marginBottom:12}}/>
-        {ae && <p style={{fontSize:12,color:tr,marginBottom:12}}>Incorrect password</p>}
-        <button onClick={()=>{if(pw==="shco2027"){setView("dashboard");loadAllBookings();setAe(false)}else setAe(true)}} style={{...S.bt,...S.bp,width:"100%"}}>Enter</button>
+        <div style={S.dv}/><p style={{fontSize:13,color:lt,margin:"16px 0 28px"}}>Booking Manager — Admin Sign In</p>
+        <input type="email" placeholder="Email" value={email} onChange={e=>{setEmail(e.target.value);setAe("")}}
+          onKeyDown={e=>{if(e.key==="Enter" && email && pw) handleSignIn()}}
+          style={{...S.ip,marginBottom:10}} autoComplete="email"/>
+        <input type="password" placeholder="Password" value={pw} onChange={e=>{setPw(e.target.value);setAe("")}}
+          onKeyDown={e=>{if(e.key==="Enter" && email && pw) handleSignIn()}}
+          style={{...S.ip,marginBottom:12}} autoComplete="current-password"/>
+        {ae && <p style={{fontSize:12,color:tr,marginBottom:12}}>{ae}</p>}
+        <button onClick={handleSignIn} disabled={!email || !pw} style={{...S.bt,...S.bp,width:"100%",opacity:(!email||!pw)?0.5:1}}>Sign In</button>
       </div>
     </div>
   );
@@ -1077,9 +1119,11 @@ export default function BookingApp() {
     <div style={S.pg}><style>{fonts}</style>
       <div style={S.hd}>
         <div><span style={S.logo}>Southern Horizon</span><span style={S.co}>Co.</span></div>
-        <div style={{display:"flex",gap:10}}>
+        <div style={{display:"flex",gap:10,alignItems:"center"}}>
+          {user && <span style={{fontSize:11,color:lt,marginRight:8}}>{user.email}</span>}
           <button onClick={loadAllBookings} style={{...S.bt,...S.bh,padding:"10px 20px",fontSize:10}}>Refresh</button>
           <button onClick={createBk} style={{...S.bt,...S.bp}}>New Booking</button>
+          <button onClick={handleSignOut} style={{...S.bt,...S.bh,padding:"10px 20px",fontSize:10}}>Sign Out</button>
         </div>
       </div>
       <div style={{maxWidth:900,margin:"0 auto",padding:"40px 24px"}}>
