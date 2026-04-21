@@ -614,7 +614,7 @@ const PACKAGES = {
   kgari: { name:"K'gari Experience", days:5, db:300, stops:["Rainbow Beach & Inskip","Southern K'gari","75 Mile Beach","Northern K'gari","Hervey Bay (optional)"] },
   "tropical-north": { name:"Tropical North", days:7, db:1050, stops:["Cairns","Port Douglas & Mossman Gorge","Daintree Rainforest","Cape Tribulation","Atherton Tablelands","Cairns (return)"] },
   "coastal-explorer": { name:"Coastal Explorer", days:21, db:2900, stops:["Rainbow Beach & Inskip","Southern K'gari","Bundaberg & 1770","Yeppoon & Capricorn Coast","Cape Hillsborough","Airlie Beach & Whitsundays","Townsville & Magnetic Island","Mission Beach","Cairns"] },
-  outback: { name:"Red Centre & Outback", days:21, db:2100, stops:["Toowoomba","Roma","Mitchell & Charleville","Blackall","Longreach","Winton","Carnarvon Gorge","Emerald & Gemfields","Rockhampton","Agnes Water & Bundaberg"] },
+  outback: { name:"Outback Queensland", days:21, db:2100, stops:["Toowoomba","Roma","Mitchell & Charleville","Blackall","Longreach","Winton","Carnarvon Gorge","Emerald & Gemfields","Rockhampton","Agnes Water & Bundaberg"] },
   whitsundays: { name:"Whitsundays", days:7, db:950, stops:["Airlie Beach","Cape Hillsborough","Mackay"] },
   "outback-taster": { name:"Outback Taster", days:7, db:800, stops:["Longreach","Winton","Longreach (return)"] },
   "capricorn-coast": { name:"Capricorn Coast", days:7, db:900, stops:["Yeppoon","1770 & Agnes Water","Rockhampton"] },
