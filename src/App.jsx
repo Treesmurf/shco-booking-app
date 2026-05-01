@@ -7,7 +7,7 @@ import { signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebas
    PROPERTY DATABASE
    ════════════════════════════════════════════════════════════════ */
 const PROPERTIES = {
-  "Rainbow Beach & Inskip": [
+  "Rainbow Beach & Inskip Point": [
     { name:"Rainbow Beach Surf Club Resort — Standard Room", type:"Rainbow Beach Surf Club Resort", ppn:180, desc:"Beachfront resort above the surf club with ocean views and sunset dining" },
     { name:"Rainbow Beach Surf Club Resort — Ocean View Room", type:"Rainbow Beach Surf Club Resort", ppn:220, desc:"Beachfront resort above the surf club with ocean views and sunset dining" },
     { name:"Rainbow Beach Surf Club Resort — Suite", type:"Rainbow Beach Surf Club Resort", ppn:280, desc:"Beachfront resort above the surf club with ocean views and sunset dining" },
@@ -36,7 +36,7 @@ const PROPERTIES = {
     { name:"Sailfish on Fraser — Apartment", type:"Sailfish on Fraser", ppn:250, desc:"Self-contained apartments in Happy Valley with ocean glimpses and island charm" },
     { name:"Sailfish on Fraser — Penthouse", type:"Sailfish on Fraser", ppn:380, desc:"Self-contained apartments in Happy Valley with ocean glimpses and island charm" },
   ],
-  "75 Mile Beach": [
+  "75 Mile Beach & East Coast": [
     { name:"Kingfisher Bay Resort — Hotel — Resort Room", type:"Kingfisher Bay Resort", ppn:200, desc:"Award-winning eco-resort on K'gari's west coast with four pools, restaurants, and ranger-guided tours" },
     { name:"Kingfisher Bay Resort — Hotel — Spa Room", type:"Kingfisher Bay Resort", ppn:280, desc:"Award-winning eco-resort on K'gari's west coast with four pools, restaurants, and ranger-guided tours" },
     { name:"Kingfisher Bay Resort — Villa — 1-Bed Villa", type:"Kingfisher Bay Villas", ppn:300, desc:"Self-contained villas set in native bushland within the Kingfisher Bay Resort precinct" },
@@ -64,7 +64,7 @@ const PROPERTIES = {
     { name:"Sailfish on Fraser — Apartment", type:"Sailfish on Fraser", ppn:250, desc:"Self-contained apartments in Happy Valley with ocean glimpses and island charm" },
     { name:"Sailfish on Fraser — Penthouse", type:"Sailfish on Fraser", ppn:380, desc:"Self-contained apartments in Happy Valley with ocean glimpses and island charm" },
   ],
-  "Hervey Bay (optional)": [
+  "Hervey Bay (optional extension)": [
     { name:"Mantra Hervey Bay — Hotel Room", type:"Mantra Hervey Bay", ppn:180, desc:"Waterfront hotel and apartments at the marina — departure point for whale watching and K'gari ferries" },
     { name:"Mantra Hervey Bay — 1-Bed Apartment", type:"Mantra Hervey Bay", ppn:250, desc:"Waterfront hotel and apartments at the marina — departure point for whale watching and K'gari ferries" },
     { name:"Mantra Hervey Bay — 2-Bed Apartment", type:"Mantra Hervey Bay", ppn:320, desc:"Waterfront hotel and apartments at the marina — departure point for whale watching and K'gari ferries" },
@@ -126,7 +126,7 @@ const PROPERTIES = {
     { name:"Peninsula Boutique Hotel — Ocean View Room", type:"Peninsula Boutique Hotel", ppn:350, desc:"Adults-only beachfront boutique hotel with infinity pool and intimate, personal service" },
     { name:"Peninsula Boutique Hotel — Penthouse Suite", type:"Peninsula Boutique Hotel", ppn:500, desc:"Adults-only beachfront boutique hotel with infinity pool and intimate, personal service" },
   ],
-  "Daintree Rainforest": [
+  "Daintree River & Rainforest": [
     { name:"Daintree Eco Lodge & Spa — Bayans Room", type:"Daintree Eco Lodge & Spa", ppn:320, desc:"Award-winning boutique eco-lodge nestled in the Daintree canopy with Aboriginal-inspired spa" },
     { name:"Daintree Eco Lodge & Spa — Bayans Deluxe", type:"Daintree Eco Lodge & Spa", ppn:400, desc:"Award-winning boutique eco-lodge nestled in the Daintree canopy with Aboriginal-inspired spa" },
     { name:"Daintree Eco Lodge & Spa — Treehouse", type:"Daintree Eco Lodge & Spa", ppn:480, desc:"Award-winning boutique eco-lodge nestled in the Daintree canopy with Aboriginal-inspired spa" },
@@ -315,9 +315,9 @@ const PROPERTIES = {
 
 
 const PACKAGES = {
-  kgari: { name:"K'gari Experience", days:5, db:300, stops:["Rainbow Beach & Inskip","Southern K'gari","75 Mile Beach","Northern K'gari","Hervey Bay (optional)"] },
+  kgari: { name:"K'gari Experience", days:5, db:300, stops:["Rainbow Beach & Inskip Point","Southern K'gari","75 Mile Beach & East Coast","Northern K'gari","Hervey Bay (optional extension)"] },
   moreton: { name:"Moreton Island Experience", days:5, db:400, stops:["Tangalooma","Cape Moreton & North"] },
-  "tropical-north": { name:"Tropical North", days:7, db:1050, stops:["Cairns","Port Douglas & Mossman Gorge","Daintree Rainforest","Cape Tribulation","Atherton Tablelands","Cairns (return)"] },
+  "tropical-north": { name:"Tropical North", days:7, db:1050, stops:["Cairns","Port Douglas & Mossman Gorge","Daintree River & Rainforest","Cape Tribulation","Atherton Tablelands","Cairns (return)"] },
   whitsundays: { name:"Whitsundays", days:7, db:950, stops:["Airlie Beach","Cape Hillsborough","Mackay"] },
   "byron-bay": { name:"Byron Bay", days:5, db:900, stops:["Byron Bay","Ballina & Air Force Beach","Yamba"] },
   "southern-downs": { name:"Southern Downs Golf & Wine", days:7, db:600, stops:["Toowoomba","Stanthorpe & the Granite Belt","Warwick & Killarney"] },
