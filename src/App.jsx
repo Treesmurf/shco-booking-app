@@ -311,6 +311,19 @@ const PROPERTIES = {
     { name:"Killarney View Cabins — Deluxe Spa Cabin", type:"Killarney View Cabins", ppn:215, desc:"Self-contained cabin with spa bath and Condamine Valley views, gateway to Queen Mary Falls" },
     { name:"Kahlers Oasis Warwick — Premium Villa", type:"Kahlers Oasis Warwick", ppn:195, desc:"Modern self-contained villa, family-friendly, the best modern build in town" },
   ],
+  "Brisbane (return)": [
+    { name:"W Brisbane — Wonderful Room", type:"W Brisbane", ppn:450, desc:"Riverside luxury hotel in CBD with rooftop pool, designer interiors, and Three Blue Ducks dining" },
+    { name:"W Brisbane — Marvelous Suite", type:"W Brisbane", ppn:650, desc:"Premium suite with separate living area, river views, and W signature bedding" },
+    { name:"The Calile Hotel — Standard Room", type:"The Calile Hotel", ppn:400, desc:"Boutique five-star resort hotel in James Street with poolside cabanas and Hellenika dining" },
+    { name:"The Calile Hotel — Calile Suite", type:"The Calile Hotel", ppn:600, desc:"Premium suite with private terrace overlooking the resort pool and James Street precinct" },
+    { name:"Emporium Hotel South Bank — Studio Suite", type:"Emporium Hotel South Bank", ppn:350, desc:"Boutique luxury hotel on the South Bank with rooftop infinity pool and curated art collection" },
+    { name:"Emporium Hotel South Bank — Royal Suite", type:"Emporium Hotel South Bank", ppn:550, desc:"Top-floor suite with panoramic river and city views, separate living and dining areas" },
+    { name:"Crystalbrook Vincent — Urban Room", type:"Crystalbrook Vincent", ppn:300, desc:"Boutique five-star hotel at Howard Smith Wharves with restaurant precinct on the doorstep" },
+    { name:"Crystalbrook Vincent — Eagle Pier Suite", type:"Crystalbrook Vincent", ppn:450, desc:"Premium suite with Story Bridge views and direct access to the Howard Smith Wharves dining strip" },
+    { name:"Sofitel Brisbane Central — Superior Room", type:"Sofitel Brisbane Central", ppn:350, desc:"Five-star French-inspired hotel above Brisbane Central Station with Cantina Bar & Grill" },
+    { name:"The Westin Brisbane — Deluxe Room", type:"The Westin Brisbane", ppn:380, desc:"Five-star Mary Street hotel with heated outdoor pool, day spa, and signature Heavenly Bed" },
+    { name:"Pullman Brisbane Airport — Deluxe Room", type:"Pullman Brisbane Airport", ppn:280, desc:"Premium airport hotel with direct shuttle, ideal for early international departures" },
+  ],
 };
 
 
@@ -320,7 +333,7 @@ const PACKAGES = {
   "tropical-north": { name:"Tropical North", days:7, db:1050, stops:["Cairns","Port Douglas & Mossman Gorge","Daintree River & Rainforest","Cape Tribulation","Atherton Tablelands","Cairns (return)"] },
   whitsundays: { name:"Whitsundays", days:7, db:950, stops:["Airlie Beach","Cape Hillsborough","Mackay"] },
   "byron-bay": { name:"Byron Bay", days:5, db:900, stops:["Byron Bay","Ballina & Air Force Beach","Yamba"] },
-  "southern-downs": { name:"Southern Downs Golf & Wine", days:7, db:600, stops:["Toowoomba","Stanthorpe & the Granite Belt","Warwick & Killarney"] },
+  "southern-downs": { name:"Southern Downs Golf & Wine", days:7, db:600, stops:["Toowoomba","Stanthorpe & the Granite Belt","Warwick & Killarney","Brisbane (return)"] },
   custom: { name:"Custom Journey", days:7, db:0, stops:[] },
 };
 
