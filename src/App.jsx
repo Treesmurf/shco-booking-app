@@ -296,7 +296,7 @@ const PROPERTIES = {
     { name:"Downs Motor Inn — Standard Room", type:"Downs Motor Inn", ppn:130, desc:"Well-appointed hotel in central Toowoomba with comfortable rooms and parking" },
     { name:"Downs Motor Inn — Deluxe Room", type:"Downs Motor Inn", ppn:170, desc:"Well-appointed hotel in central Toowoomba with comfortable rooms and parking" },
   ],
-  "Stanthorpe & Granite Belt": [
+  "Stanthorpe & the Granite Belt": [
     { name:"Ridgemill Estate — Vineyard Cabin", type:"Ridgemill Estate", ppn:295, desc:"Detached cabin among vines with private deck, fire pit, and breakfast hamper option" },
     { name:"Ridgemill Estate — Spa Cabin", type:"Ridgemill Estate", ppn:365, desc:"Upgraded vineyard cabin with outdoor spa bath and queen bed" },
     { name:"Diamondvale Cottages — Creekside Cottage", type:"Diamondvale Cottages", ppn:285, desc:"Heritage-style cottage on Quart Pot Creek with wood fireplace, walk to town" },
@@ -320,7 +320,7 @@ const PACKAGES = {
   "tropical-north": { name:"Tropical North", days:7, db:1050, stops:["Cairns","Port Douglas & Mossman Gorge","Daintree Rainforest","Cape Tribulation","Atherton Tablelands","Cairns (return)"] },
   whitsundays: { name:"Whitsundays", days:7, db:950, stops:["Airlie Beach","Cape Hillsborough","Mackay"] },
   "byron-bay": { name:"Byron Bay", days:5, db:900, stops:["Byron Bay","Ballina & Air Force Beach","Yamba"] },
-  "southern-downs": { name:"Southern Downs Golf & Wine", days:7, db:600, stops:["Toowoomba","Stanthorpe & Granite Belt","Warwick & Killarney"] },
+  "southern-downs": { name:"Southern Downs Golf & Wine", days:7, db:600, stops:["Toowoomba","Stanthorpe & the Granite Belt","Warwick & Killarney"] },
   custom: { name:"Custom Journey", days:7, db:0, stops:[] },
 };
 
