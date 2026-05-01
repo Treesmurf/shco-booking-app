@@ -81,24 +81,18 @@ const PROPERTIES = {
     { name:"Akama Resort — 1-Bed Apartment", type:"Akama Resort", ppn:200, desc:"Tropical resort with lagoon pool set among palm gardens on the Hervey Bay esplanade" },
     { name:"Akama Resort — 2-Bed Apartment", type:"Akama Resort", ppn:280, desc:"Tropical resort with lagoon pool set among palm gardens on the Hervey Bay esplanade" },
   ],
-  "Cairns": [
-    { name:"Riley Crystalbrook — Urban Room", type:"Riley Crystalbrook", ppn:300, desc:"Five-star resort on the Esplanade with rooftop bar, Crystal Lagoon pool, and panoramic ocean views" },
-    { name:"Riley Crystalbrook — Lagoon Room", type:"Riley Crystalbrook", ppn:380, desc:"Five-star resort on the Esplanade with rooftop bar, Crystal Lagoon pool, and panoramic ocean views" },
-    { name:"Riley Crystalbrook — Suite", type:"Riley Crystalbrook", ppn:500, desc:"Five-star resort on the Esplanade with rooftop bar, Crystal Lagoon pool, and panoramic ocean views" },
-    { name:"Pullman Cairns International — Superior Room", type:"Pullman Cairns International", ppn:250, desc:"Five-star harbourside hotel in the CBD with tropical pool terrace and Coco's restaurant" },
-    { name:"Pullman Cairns International — Deluxe Harbour View", type:"Pullman Cairns International", ppn:320, desc:"Five-star harbourside hotel in the CBD with tropical pool terrace and Coco's restaurant" },
-    { name:"Pullman Cairns International — Suite", type:"Pullman Cairns International", ppn:450, desc:"Five-star harbourside hotel in the CBD with tropical pool terrace and Coco's restaurant" },
-    { name:"Shangri-La The Marina — Deluxe Room", type:"Shangri-La The Marina", ppn:280, desc:"Luxury waterfront hotel overlooking Marlin Marina with Horizon Club lounge and spa" },
-    { name:"Shangri-La The Marina — Horizon Club", type:"Shangri-La The Marina", ppn:380, desc:"Luxury waterfront hotel overlooking Marlin Marina with Horizon Club lounge and spa" },
-    { name:"Shangri-La The Marina — Suite", type:"Shangri-La The Marina", ppn:520, desc:"Luxury waterfront hotel overlooking Marlin Marina with Horizon Club lounge and spa" },
-    { name:"Crystalbrook Flynn — Urban Room", type:"Crystalbrook Flynn", ppn:250, desc:"Boutique five-star hotel in the arts precinct with curated art collection and Flynn's Italian restaurant" },
-    { name:"Crystalbrook Flynn — Flynn Suite", type:"Crystalbrook Flynn", ppn:350, desc:"Boutique five-star hotel in the arts precinct with curated art collection and Flynn's Italian restaurant" },
-    { name:"Crystalbrook Flynn — Penthouse", type:"Crystalbrook Flynn", ppn:500, desc:"Boutique five-star hotel in the arts precinct with curated art collection and Flynn's Italian restaurant" },
-    { name:"Alamanda Palm Cove — 1-Bed Apartment", type:"Alamanda Palm Cove", ppn:300, desc:"Beachfront resort in Palm Cove with lush tropical gardens, pool, and direct beach access" },
-    { name:"Alamanda Palm Cove — 2-Bed Apartment", type:"Alamanda Palm Cove", ppn:400, desc:"Beachfront resort in Palm Cove with lush tropical gardens, pool, and direct beach access" },
-    { name:"Alamanda Palm Cove — Penthouse", type:"Alamanda Palm Cove", ppn:550, desc:"Beachfront resort in Palm Cove with lush tropical gardens, pool, and direct beach access" },
+  "Tangalooma": [
+    { name:"Tangalooma Island Resort — Hotel Room", type:"Tangalooma Island Resort", ppn:285, desc:"Standard hotel room in main resort wing with resort/garden outlook on Moreton Island" },
+    { name:"Tangalooma Island Resort — Resort Unit (1-Bed)", type:"Tangalooma Island Resort", ppn:395, desc:"Self-contained apartment-style unit with kitchenette, lounge, and balcony" },
+    { name:"Tangalooma Island Resort — Tangalooma Suite", type:"Tangalooma Island Resort", ppn:525, desc:"Upgraded suite with ocean glimpses, separate living area, premium finishes" },
+    { name:"Tangalooma Island Resort — Beachfront Villa (2-Bed)", type:"Tangalooma Island Resort", ppn:695, desc:"Premium absolute-beachfront villa with full kitchen, two bedrooms, direct sand access" },
   ],
-  "Cairns (return)": [
+  "Cape Moreton & North": [
+    { name:"Castaways Moreton Island — Beach House (4-person)", type:"Castaways Moreton Island", ppn:320, desc:"Self-contained timber beach house in Bulwer village, walking distance to jetty" },
+    { name:"Castaways Moreton Island — Beachfront House (6-person)", type:"Castaways Moreton Island", ppn:480, desc:"Larger absolute-beachfront house with multiple bedrooms and BBQ deck" },
+    { name:"Cowan Cowan Beach House — Private Rental", type:"Cowan Cowan Holiday Rentals", ppn:380, desc:"Privately let beach house in Cowan Cowan settlement north of Tangalooma" },
+  ],
+  "Cairns": [
     { name:"Riley Crystalbrook — Urban Room", type:"Riley Crystalbrook", ppn:300, desc:"Five-star resort on the Esplanade with rooftop bar, Crystal Lagoon pool, and panoramic ocean views" },
     { name:"Riley Crystalbrook — Lagoon Room", type:"Riley Crystalbrook", ppn:380, desc:"Five-star resort on the Esplanade with rooftop bar, Crystal Lagoon pool, and panoramic ocean views" },
     { name:"Riley Crystalbrook — Suite", type:"Riley Crystalbrook", ppn:500, desc:"Five-star resort on the Esplanade with rooftop bar, Crystal Lagoon pool, and panoramic ocean views" },
@@ -174,85 +168,39 @@ const PROPERTIES = {
     { name:"Allumbah Pocket Cottages — Cottage", type:"Allumbah Pocket Cottages", ppn:180, desc:"Charming cottages in Yungaburra village — platypus viewing just a short walk away" },
     { name:"Allumbah Pocket Cottages — Deluxe Cottage", type:"Allumbah Pocket Cottages", ppn:240, desc:"Charming cottages in Yungaburra village — platypus viewing just a short walk away" },
   ],
-  "Bundaberg & 1770": [
-    { name:"Lagoons 1770 Beachfront Resort — Resort Room", type:"Lagoons 1770 Beachfront Resort", ppn:220, desc:"Beachfront resort in the Town of 1770 with lagoon pool and waterfront dining" },
-    { name:"Lagoons 1770 Beachfront Resort — 1-Bed Apartment", type:"Lagoons 1770 Beachfront Resort", ppn:280, desc:"Beachfront resort in the Town of 1770 with lagoon pool and waterfront dining" },
-    { name:"Lagoons 1770 Beachfront Resort — 2-Bed Apartment", type:"Lagoons 1770 Beachfront Resort", ppn:350, desc:"Beachfront resort in the Town of 1770 with lagoon pool and waterfront dining" },
-    { name:"Sandcastles 1770 Motel — Standard Room", type:"Sandcastles 1770 Motel", ppn:160, desc:"Contemporary motel in Agnes Water with pool and easy access to the beach" },
-    { name:"Sandcastles 1770 Motel — Deluxe Room", type:"Sandcastles 1770 Motel", ppn:200, desc:"Contemporary motel in Agnes Water with pool and easy access to the beach" },
-    { name:"Sandcastles 1770 Motel — Family Suite", type:"Sandcastles 1770 Motel", ppn:260, desc:"Contemporary motel in Agnes Water with pool and easy access to the beach" },
-    { name:"Agnes Water Beach Club — Studio", type:"Agnes Water Beach Club", ppn:200, desc:"Modern rooftop pool complex in Agnes Water with ocean views and relaxed coastal vibe" },
-    { name:"Agnes Water Beach Club — 1-Bed Apartment", type:"Agnes Water Beach Club", ppn:280, desc:"Modern rooftop pool complex in Agnes Water with ocean views and relaxed coastal vibe" },
-    { name:"Agnes Water Beach Club — 2-Bed Penthouse", type:"Agnes Water Beach Club", ppn:380, desc:"Modern rooftop pool complex in Agnes Water with ocean views and relaxed coastal vibe" },
-    { name:"The Deck at 1770 — Cabin", type:"The Deck at 1770", ppn:180, desc:"Elevated eco-villas in a private bush setting overlooking the coastline" },
-    { name:"The Deck at 1770 — Eco Villa", type:"The Deck at 1770", ppn:250, desc:"Elevated eco-villas in a private bush setting overlooking the coastline" },
-    { name:"Kellys Beach Resort Bargara — Studio", type:"Kellys Beach Resort Bargara", ppn:180, desc:"Beachfront resort in Bargara with pool, BBQ areas, and Bundaberg region access" },
-    { name:"Kellys Beach Resort Bargara — 1-Bed Apartment", type:"Kellys Beach Resort Bargara", ppn:240, desc:"Beachfront resort in Bargara with pool, BBQ areas, and Bundaberg region access" },
-    { name:"Kellys Beach Resort Bargara — 2-Bed Apartment", type:"Kellys Beach Resort Bargara", ppn:320, desc:"Beachfront resort in Bargara with pool, BBQ areas, and Bundaberg region access" },
+  "Cairns (return)": [
+    { name:"Riley Crystalbrook — Urban Room", type:"Riley Crystalbrook", ppn:300, desc:"Five-star resort on the Esplanade with rooftop bar, Crystal Lagoon pool, and panoramic ocean views" },
+    { name:"Riley Crystalbrook — Lagoon Room", type:"Riley Crystalbrook", ppn:380, desc:"Five-star resort on the Esplanade with rooftop bar, Crystal Lagoon pool, and panoramic ocean views" },
+    { name:"Riley Crystalbrook — Suite", type:"Riley Crystalbrook", ppn:500, desc:"Five-star resort on the Esplanade with rooftop bar, Crystal Lagoon pool, and panoramic ocean views" },
+    { name:"Pullman Cairns International — Superior Room", type:"Pullman Cairns International", ppn:250, desc:"Five-star harbourside hotel in the CBD with tropical pool terrace and Coco's restaurant" },
+    { name:"Pullman Cairns International — Deluxe Harbour View", type:"Pullman Cairns International", ppn:320, desc:"Five-star harbourside hotel in the CBD with tropical pool terrace and Coco's restaurant" },
+    { name:"Pullman Cairns International — Suite", type:"Pullman Cairns International", ppn:450, desc:"Five-star harbourside hotel in the CBD with tropical pool terrace and Coco's restaurant" },
+    { name:"Shangri-La The Marina — Deluxe Room", type:"Shangri-La The Marina", ppn:280, desc:"Luxury waterfront hotel overlooking Marlin Marina with Horizon Club lounge and spa" },
+    { name:"Shangri-La The Marina — Horizon Club", type:"Shangri-La The Marina", ppn:380, desc:"Luxury waterfront hotel overlooking Marlin Marina with Horizon Club lounge and spa" },
+    { name:"Shangri-La The Marina — Suite", type:"Shangri-La The Marina", ppn:520, desc:"Luxury waterfront hotel overlooking Marlin Marina with Horizon Club lounge and spa" },
+    { name:"Crystalbrook Flynn — Urban Room", type:"Crystalbrook Flynn", ppn:250, desc:"Boutique five-star hotel in the arts precinct with curated art collection and Flynn's Italian restaurant" },
+    { name:"Crystalbrook Flynn — Flynn Suite", type:"Crystalbrook Flynn", ppn:350, desc:"Boutique five-star hotel in the arts precinct with curated art collection and Flynn's Italian restaurant" },
+    { name:"Crystalbrook Flynn — Penthouse", type:"Crystalbrook Flynn", ppn:500, desc:"Boutique five-star hotel in the arts precinct with curated art collection and Flynn's Italian restaurant" },
+    { name:"Alamanda Palm Cove — 1-Bed Apartment", type:"Alamanda Palm Cove", ppn:300, desc:"Beachfront resort in Palm Cove with lush tropical gardens, pool, and direct beach access" },
+    { name:"Alamanda Palm Cove — 2-Bed Apartment", type:"Alamanda Palm Cove", ppn:400, desc:"Beachfront resort in Palm Cove with lush tropical gardens, pool, and direct beach access" },
+    { name:"Alamanda Palm Cove — Penthouse", type:"Alamanda Palm Cove", ppn:550, desc:"Beachfront resort in Palm Cove with lush tropical gardens, pool, and direct beach access" },
   ],
-  "1770 & Agnes Water": [
-    { name:"Lagoons 1770 Beachfront Resort — Resort Room", type:"Lagoons 1770 Beachfront Resort", ppn:220, desc:"Beachfront resort in the Town of 1770 with lagoon pool and waterfront dining" },
-    { name:"Lagoons 1770 Beachfront Resort — 1-Bed Apartment", type:"Lagoons 1770 Beachfront Resort", ppn:280, desc:"Beachfront resort in the Town of 1770 with lagoon pool and waterfront dining" },
-    { name:"Lagoons 1770 Beachfront Resort — 2-Bed Apartment", type:"Lagoons 1770 Beachfront Resort", ppn:350, desc:"Beachfront resort in the Town of 1770 with lagoon pool and waterfront dining" },
-    { name:"Sandcastles 1770 Motel — Standard Room", type:"Sandcastles 1770 Motel", ppn:160, desc:"Contemporary motel in Agnes Water with pool and easy access to the beach" },
-    { name:"Sandcastles 1770 Motel — Deluxe Room", type:"Sandcastles 1770 Motel", ppn:200, desc:"Contemporary motel in Agnes Water with pool and easy access to the beach" },
-    { name:"Sandcastles 1770 Motel — Family Suite", type:"Sandcastles 1770 Motel", ppn:260, desc:"Contemporary motel in Agnes Water with pool and easy access to the beach" },
-    { name:"Agnes Water Beach Club — Studio", type:"Agnes Water Beach Club", ppn:200, desc:"Modern rooftop pool complex in Agnes Water with ocean views and relaxed coastal vibe" },
-    { name:"Agnes Water Beach Club — 1-Bed Apartment", type:"Agnes Water Beach Club", ppn:280, desc:"Modern rooftop pool complex in Agnes Water with ocean views and relaxed coastal vibe" },
-    { name:"Agnes Water Beach Club — 2-Bed Penthouse", type:"Agnes Water Beach Club", ppn:380, desc:"Modern rooftop pool complex in Agnes Water with ocean views and relaxed coastal vibe" },
-    { name:"The Deck at 1770 — Cabin", type:"The Deck at 1770", ppn:180, desc:"Elevated eco-villas in a private bush setting overlooking the coastline" },
-    { name:"The Deck at 1770 — Eco Villa", type:"The Deck at 1770", ppn:250, desc:"Elevated eco-villas in a private bush setting overlooking the coastline" },
-    { name:"Kellys Beach Resort Bargara — Studio", type:"Kellys Beach Resort Bargara", ppn:180, desc:"Beachfront resort in Bargara with pool, BBQ areas, and Bundaberg region access" },
-    { name:"Kellys Beach Resort Bargara — 1-Bed Apartment", type:"Kellys Beach Resort Bargara", ppn:240, desc:"Beachfront resort in Bargara with pool, BBQ areas, and Bundaberg region access" },
-    { name:"Kellys Beach Resort Bargara — 2-Bed Apartment", type:"Kellys Beach Resort Bargara", ppn:320, desc:"Beachfront resort in Bargara with pool, BBQ areas, and Bundaberg region access" },
-  ],
-  "Agnes Water & Bundaberg": [
-    { name:"Lagoons 1770 Beachfront Resort — Resort Room", type:"Lagoons 1770 Beachfront Resort", ppn:220, desc:"Beachfront resort in the Town of 1770 with lagoon pool and waterfront dining" },
-    { name:"Lagoons 1770 Beachfront Resort — 1-Bed Apartment", type:"Lagoons 1770 Beachfront Resort", ppn:280, desc:"Beachfront resort in the Town of 1770 with lagoon pool and waterfront dining" },
-    { name:"Lagoons 1770 Beachfront Resort — 2-Bed Apartment", type:"Lagoons 1770 Beachfront Resort", ppn:350, desc:"Beachfront resort in the Town of 1770 with lagoon pool and waterfront dining" },
-    { name:"Sandcastles 1770 Motel — Standard Room", type:"Sandcastles 1770 Motel", ppn:160, desc:"Contemporary motel in Agnes Water with pool and easy access to the beach" },
-    { name:"Sandcastles 1770 Motel — Deluxe Room", type:"Sandcastles 1770 Motel", ppn:200, desc:"Contemporary motel in Agnes Water with pool and easy access to the beach" },
-    { name:"Sandcastles 1770 Motel — Family Suite", type:"Sandcastles 1770 Motel", ppn:260, desc:"Contemporary motel in Agnes Water with pool and easy access to the beach" },
-    { name:"Agnes Water Beach Club — Studio", type:"Agnes Water Beach Club", ppn:200, desc:"Modern rooftop pool complex in Agnes Water with ocean views and relaxed coastal vibe" },
-    { name:"Agnes Water Beach Club — 1-Bed Apartment", type:"Agnes Water Beach Club", ppn:280, desc:"Modern rooftop pool complex in Agnes Water with ocean views and relaxed coastal vibe" },
-    { name:"Agnes Water Beach Club — 2-Bed Penthouse", type:"Agnes Water Beach Club", ppn:380, desc:"Modern rooftop pool complex in Agnes Water with ocean views and relaxed coastal vibe" },
-    { name:"The Deck at 1770 — Cabin", type:"The Deck at 1770", ppn:180, desc:"Elevated eco-villas in a private bush setting overlooking the coastline" },
-    { name:"The Deck at 1770 — Eco Villa", type:"The Deck at 1770", ppn:250, desc:"Elevated eco-villas in a private bush setting overlooking the coastline" },
-    { name:"Kellys Beach Resort Bargara — Studio", type:"Kellys Beach Resort Bargara", ppn:180, desc:"Beachfront resort in Bargara with pool, BBQ areas, and Bundaberg region access" },
-    { name:"Kellys Beach Resort Bargara — 1-Bed Apartment", type:"Kellys Beach Resort Bargara", ppn:240, desc:"Beachfront resort in Bargara with pool, BBQ areas, and Bundaberg region access" },
-    { name:"Kellys Beach Resort Bargara — 2-Bed Apartment", type:"Kellys Beach Resort Bargara", ppn:320, desc:"Beachfront resort in Bargara with pool, BBQ areas, and Bundaberg region access" },
-  ],
-  "Yeppoon": [
-    { name:"Salt Yeppoon — 1-Bed Apartment", type:"Salt Yeppoon", ppn:250, desc:"Premium waterfront apartments with infinity pool, rooftop terrace, and Keppel Bay views" },
-    { name:"Salt Yeppoon — 2-Bed Apartment", type:"Salt Yeppoon", ppn:350, desc:"Premium waterfront apartments with infinity pool, rooftop terrace, and Keppel Bay views" },
-    { name:"Salt Yeppoon — Penthouse", type:"Salt Yeppoon", ppn:500, desc:"Premium waterfront apartments with infinity pool, rooftop terrace, and Keppel Bay views" },
-    { name:"Coral Inn Boutique Resort — Resort Room", type:"Coral Inn Boutique Resort", ppn:180, desc:"Boutique resort in central Yeppoon with spa rooms and intimate tropical setting" },
-    { name:"Coral Inn Boutique Resort — Spa Room", type:"Coral Inn Boutique Resort", ppn:250, desc:"Boutique resort in central Yeppoon with spa rooms and intimate tropical setting" },
-    { name:"Coral Inn Boutique Resort — Suite", type:"Coral Inn Boutique Resort", ppn:320, desc:"Boutique resort in central Yeppoon with spa rooms and intimate tropical setting" },
-    { name:"Villa Mar Colina — Villa", type:"Villa Mar Colina", ppn:200, desc:"Mediterranean-inspired villas with private pool and coastal Yeppoon views" },
-    { name:"Villa Mar Colina — Deluxe Villa", type:"Villa Mar Colina", ppn:280, desc:"Mediterranean-inspired villas with private pool and coastal Yeppoon views" },
-    { name:"Oshen Apartments — 1-Bed Apartment", type:"Oshen Apartments", ppn:220, desc:"Modern ocean-view apartments with rooftop terrace and contemporary design" },
-    { name:"Oshen Apartments — 2-Bed Apartment", type:"Oshen Apartments", ppn:300, desc:"Modern ocean-view apartments with rooftop terrace and contemporary design" },
-    { name:"Oshen Apartments — 3-Bed Apartment", type:"Oshen Apartments", ppn:400, desc:"Modern ocean-view apartments with rooftop terrace and contemporary design" },
-    { name:"Capricorn Palms Holiday Park — Cabin", type:"Capricorn Palms Resort", ppn:140, desc:"Family resort with pool, water park, and cabins set in tropical gardens" },
-    { name:"Capricorn Palms Holiday Park — Deluxe Cabin", type:"Capricorn Palms Resort", ppn:190, desc:"Family resort with pool, water park, and cabins set in tropical gardens" },
-    { name:"Capricorn Palms Holiday Park — Villa", type:"Capricorn Palms Resort", ppn:250, desc:"Family resort with pool, water park, and cabins set in tropical gardens" },
-  ],
-  "Yeppoon & Capricorn Coast": [
-    { name:"Salt Yeppoon — 1-Bed Apartment", type:"Salt Yeppoon", ppn:250, desc:"Premium waterfront apartments with infinity pool, rooftop terrace, and Keppel Bay views" },
-    { name:"Salt Yeppoon — 2-Bed Apartment", type:"Salt Yeppoon", ppn:350, desc:"Premium waterfront apartments with infinity pool, rooftop terrace, and Keppel Bay views" },
-    { name:"Salt Yeppoon — Penthouse", type:"Salt Yeppoon", ppn:500, desc:"Premium waterfront apartments with infinity pool, rooftop terrace, and Keppel Bay views" },
-    { name:"Coral Inn Boutique Resort — Resort Room", type:"Coral Inn Boutique Resort", ppn:180, desc:"Boutique resort in central Yeppoon with spa rooms and intimate tropical setting" },
-    { name:"Coral Inn Boutique Resort — Spa Room", type:"Coral Inn Boutique Resort", ppn:250, desc:"Boutique resort in central Yeppoon with spa rooms and intimate tropical setting" },
-    { name:"Coral Inn Boutique Resort — Suite", type:"Coral Inn Boutique Resort", ppn:320, desc:"Boutique resort in central Yeppoon with spa rooms and intimate tropical setting" },
-    { name:"Villa Mar Colina — Villa", type:"Villa Mar Colina", ppn:200, desc:"Mediterranean-inspired villas with private pool and coastal Yeppoon views" },
-    { name:"Villa Mar Colina — Deluxe Villa", type:"Villa Mar Colina", ppn:280, desc:"Mediterranean-inspired villas with private pool and coastal Yeppoon views" },
-    { name:"Oshen Apartments — 1-Bed Apartment", type:"Oshen Apartments", ppn:220, desc:"Modern ocean-view apartments with rooftop terrace and contemporary design" },
-    { name:"Oshen Apartments — 2-Bed Apartment", type:"Oshen Apartments", ppn:300, desc:"Modern ocean-view apartments with rooftop terrace and contemporary design" },
-    { name:"Oshen Apartments — 3-Bed Apartment", type:"Oshen Apartments", ppn:400, desc:"Modern ocean-view apartments with rooftop terrace and contemporary design" },
-    { name:"Capricorn Palms Holiday Park — Cabin", type:"Capricorn Palms Resort", ppn:140, desc:"Family resort with pool, water park, and cabins set in tropical gardens" },
-    { name:"Capricorn Palms Holiday Park — Deluxe Cabin", type:"Capricorn Palms Resort", ppn:190, desc:"Family resort with pool, water park, and cabins set in tropical gardens" },
-    { name:"Capricorn Palms Holiday Park — Villa", type:"Capricorn Palms Resort", ppn:250, desc:"Family resort with pool, water park, and cabins set in tropical gardens" },
+  "Airlie Beach": [
+    { name:"Coral Sea Resort — Garden Room", type:"Coral Sea Resort", ppn:280, desc:"Absolute waterfront resort with infinity pool and panoramic Whitsunday Island views" },
+    { name:"Coral Sea Resort — Ocean View Room", type:"Coral Sea Resort", ppn:380, desc:"Absolute waterfront resort with infinity pool and panoramic Whitsunday Island views" },
+    { name:"Coral Sea Resort — Waterfront Suite", type:"Coral Sea Resort", ppn:500, desc:"Absolute waterfront resort with infinity pool and panoramic Whitsunday Island views" },
+    { name:"Peppers Airlie Beach — 1-Bed Apartment", type:"Peppers Airlie Beach", ppn:300, desc:"Contemporary resort with marina views, infinity pool, and walk to Airlie Beach village" },
+    { name:"Peppers Airlie Beach — 2-Bed Apartment", type:"Peppers Airlie Beach", ppn:400, desc:"Contemporary resort with marina views, infinity pool, and walk to Airlie Beach village" },
+    { name:"Peppers Airlie Beach — Penthouse", type:"Peppers Airlie Beach", ppn:540, desc:"Contemporary resort with marina views, infinity pool, and walk to Airlie Beach village" },
+    { name:"Mantra Club Croc — Hotel Room", type:"Mantra Club Croc", ppn:220, desc:"Central Airlie Beach hotel within walking distance of restaurants, bars, and the lagoon" },
+    { name:"Mantra Club Croc — 1-Bed Apartment", type:"Mantra Club Croc", ppn:300, desc:"Central Airlie Beach hotel within walking distance of restaurants, bars, and the lagoon" },
+    { name:"Mantra Club Croc — 2-Bed Apartment", type:"Mantra Club Croc", ppn:400, desc:"Central Airlie Beach hotel within walking distance of restaurants, bars, and the lagoon" },
+    { name:"Mirage Whitsundays — 1-Bed Apartment", type:"Mirage Whitsundays", ppn:250, desc:"Family-friendly resort with expansive lagoon pool and tropical garden apartments" },
+    { name:"Mirage Whitsundays — 2-Bed Apartment", type:"Mirage Whitsundays", ppn:350, desc:"Family-friendly resort with expansive lagoon pool and tropical garden apartments" },
+    { name:"Mirage Whitsundays — 3-Bed Apartment", type:"Mirage Whitsundays", ppn:450, desc:"Family-friendly resort with expansive lagoon pool and tropical garden apartments" },
+    { name:"InterContinental Hayman Island — Resort Room", type:"InterContinental Hayman Island", ppn:800, desc:"Ultra-luxury private island resort — one of Australia's most exclusive destinations" },
+    { name:"InterContinental Hayman Island — Pool Access Room", type:"InterContinental Hayman Island", ppn:1000, desc:"Ultra-luxury private island resort — one of Australia's most exclusive destinations" },
+    { name:"InterContinental Hayman Island — Suite", type:"InterContinental Hayman Island", ppn:1500, desc:"Ultra-luxury private island resort — one of Australia's most exclusive destinations" },
   ],
   "Cape Hillsborough": [
     { name:"Ocean International Mackay — Standard Room", type:"Ocean International Mackay", ppn:160, desc:"Waterfront hotel on Mackay's harbour with pool and ocean-facing restaurant" },
@@ -285,232 +233,6 @@ const PROPERTIES = {
     { name:"Windmill Motel Mackay — Standard Room", type:"Windmill Motel Mackay", ppn:140, desc:"Contemporary hotel in central Mackay with pool and restaurant" },
     { name:"Windmill Motel Mackay — Deluxe Room", type:"Windmill Motel Mackay", ppn:180, desc:"Contemporary hotel in central Mackay with pool and restaurant" },
     { name:"Windmill Motel Mackay — Suite", type:"Windmill Motel Mackay", ppn:240, desc:"Contemporary hotel in central Mackay with pool and restaurant" },
-  ],
-  "Airlie Beach": [
-    { name:"Coral Sea Resort — Garden Room", type:"Coral Sea Resort", ppn:280, desc:"Absolute waterfront resort with infinity pool and panoramic Whitsunday Island views" },
-    { name:"Coral Sea Resort — Ocean View Room", type:"Coral Sea Resort", ppn:380, desc:"Absolute waterfront resort with infinity pool and panoramic Whitsunday Island views" },
-    { name:"Coral Sea Resort — Waterfront Suite", type:"Coral Sea Resort", ppn:500, desc:"Absolute waterfront resort with infinity pool and panoramic Whitsunday Island views" },
-    { name:"Peppers Airlie Beach — 1-Bed Apartment", type:"Peppers Airlie Beach", ppn:300, desc:"Contemporary resort with marina views, infinity pool, and walk to Airlie Beach village" },
-    { name:"Peppers Airlie Beach — 2-Bed Apartment", type:"Peppers Airlie Beach", ppn:400, desc:"Contemporary resort with marina views, infinity pool, and walk to Airlie Beach village" },
-    { name:"Peppers Airlie Beach — Penthouse", type:"Peppers Airlie Beach", ppn:540, desc:"Contemporary resort with marina views, infinity pool, and walk to Airlie Beach village" },
-    { name:"Mantra Club Croc — Hotel Room", type:"Mantra Club Croc", ppn:220, desc:"Central Airlie Beach hotel within walking distance of restaurants, bars, and the lagoon" },
-    { name:"Mantra Club Croc — 1-Bed Apartment", type:"Mantra Club Croc", ppn:300, desc:"Central Airlie Beach hotel within walking distance of restaurants, bars, and the lagoon" },
-    { name:"Mantra Club Croc — 2-Bed Apartment", type:"Mantra Club Croc", ppn:400, desc:"Central Airlie Beach hotel within walking distance of restaurants, bars, and the lagoon" },
-    { name:"Mirage Whitsundays — 1-Bed Apartment", type:"Mirage Whitsundays", ppn:250, desc:"Family-friendly resort with expansive lagoon pool and tropical garden apartments" },
-    { name:"Mirage Whitsundays — 2-Bed Apartment", type:"Mirage Whitsundays", ppn:350, desc:"Family-friendly resort with expansive lagoon pool and tropical garden apartments" },
-    { name:"Mirage Whitsundays — 3-Bed Apartment", type:"Mirage Whitsundays", ppn:450, desc:"Family-friendly resort with expansive lagoon pool and tropical garden apartments" },
-    { name:"InterContinental Hayman Island — Resort Room", type:"InterContinental Hayman Island", ppn:800, desc:"Ultra-luxury private island resort — one of Australia's most exclusive destinations" },
-    { name:"InterContinental Hayman Island — Pool Access Room", type:"InterContinental Hayman Island", ppn:1000, desc:"Ultra-luxury private island resort — one of Australia's most exclusive destinations" },
-    { name:"InterContinental Hayman Island — Suite", type:"InterContinental Hayman Island", ppn:1500, desc:"Ultra-luxury private island resort — one of Australia's most exclusive destinations" },
-  ],
-  "Airlie Beach & Whitsundays": [
-    { name:"Coral Sea Resort — Garden Room", type:"Coral Sea Resort", ppn:280, desc:"Absolute waterfront resort with infinity pool and panoramic Whitsunday Island views" },
-    { name:"Coral Sea Resort — Ocean View Room", type:"Coral Sea Resort", ppn:380, desc:"Absolute waterfront resort with infinity pool and panoramic Whitsunday Island views" },
-    { name:"Coral Sea Resort — Waterfront Suite", type:"Coral Sea Resort", ppn:500, desc:"Absolute waterfront resort with infinity pool and panoramic Whitsunday Island views" },
-    { name:"Peppers Airlie Beach — 1-Bed Apartment", type:"Peppers Airlie Beach", ppn:300, desc:"Contemporary resort with marina views, infinity pool, and walk to Airlie Beach village" },
-    { name:"Peppers Airlie Beach — 2-Bed Apartment", type:"Peppers Airlie Beach", ppn:400, desc:"Contemporary resort with marina views, infinity pool, and walk to Airlie Beach village" },
-    { name:"Peppers Airlie Beach — Penthouse", type:"Peppers Airlie Beach", ppn:540, desc:"Contemporary resort with marina views, infinity pool, and walk to Airlie Beach village" },
-    { name:"Mantra Club Croc — Hotel Room", type:"Mantra Club Croc", ppn:220, desc:"Central Airlie Beach hotel within walking distance of restaurants, bars, and the lagoon" },
-    { name:"Mantra Club Croc — 1-Bed Apartment", type:"Mantra Club Croc", ppn:300, desc:"Central Airlie Beach hotel within walking distance of restaurants, bars, and the lagoon" },
-    { name:"Mantra Club Croc — 2-Bed Apartment", type:"Mantra Club Croc", ppn:400, desc:"Central Airlie Beach hotel within walking distance of restaurants, bars, and the lagoon" },
-    { name:"Mirage Whitsundays — 1-Bed Apartment", type:"Mirage Whitsundays", ppn:250, desc:"Family-friendly resort with expansive lagoon pool and tropical garden apartments" },
-    { name:"Mirage Whitsundays — 2-Bed Apartment", type:"Mirage Whitsundays", ppn:350, desc:"Family-friendly resort with expansive lagoon pool and tropical garden apartments" },
-    { name:"Mirage Whitsundays — 3-Bed Apartment", type:"Mirage Whitsundays", ppn:450, desc:"Family-friendly resort with expansive lagoon pool and tropical garden apartments" },
-    { name:"InterContinental Hayman Island — Resort Room", type:"InterContinental Hayman Island", ppn:800, desc:"Ultra-luxury private island resort — one of Australia's most exclusive destinations" },
-    { name:"InterContinental Hayman Island — Pool Access Room", type:"InterContinental Hayman Island", ppn:1000, desc:"Ultra-luxury private island resort — one of Australia's most exclusive destinations" },
-    { name:"InterContinental Hayman Island — Suite", type:"InterContinental Hayman Island", ppn:1500, desc:"Ultra-luxury private island resort — one of Australia's most exclusive destinations" },
-  ],
-  "Townsville & Magnetic Island": [
-    { name:"The Ville Resort — Casino — Standard Room", type:"The Ville Resort", ppn:200, desc:"Premier waterfront resort on The Strand with casino, pool, and ocean views" },
-    { name:"The Ville Resort — Casino — Deluxe Room", type:"The Ville Resort", ppn:280, desc:"Premier waterfront resort on The Strand with casino, pool, and ocean views" },
-    { name:"The Ville Resort — Casino — Suite", type:"The Ville Resort", ppn:400, desc:"Premier waterfront resort on The Strand with casino, pool, and ocean views" },
-    { name:"Peppers Blue on Blue — Magnetic Is. — 1-Bed Apartment", type:"Peppers Blue on Blue", ppn:250, desc:"Modern marina apartments on Magnetic Island with ferry access and island lifestyle" },
-    { name:"Peppers Blue on Blue — Magnetic Is. — 2-Bed Apartment", type:"Peppers Blue on Blue", ppn:350, desc:"Modern marina apartments on Magnetic Island with ferry access and island lifestyle" },
-    { name:"Peppers Blue on Blue — Magnetic Is. — Marina Suite", type:"Peppers Blue on Blue", ppn:450, desc:"Modern marina apartments on Magnetic Island with ferry access and island lifestyle" },
-    { name:"Rydges Southbank Townsville — Standard Room", type:"Rydges Southbank Townsville", ppn:180, desc:"Contemporary hotel in the Palmer Street dining precinct with rooftop pool" },
-    { name:"Rydges Southbank Townsville — City View Room", type:"Rydges Southbank Townsville", ppn:240, desc:"Contemporary hotel in the Palmer Street dining precinct with rooftop pool" },
-    { name:"Rydges Southbank Townsville — Suite", type:"Rydges Southbank Townsville", ppn:350, desc:"Contemporary hotel in the Palmer Street dining precinct with rooftop pool" },
-    { name:"Grand Hotel Townsville — Heritage Room", type:"Grand Hotel Townsville", ppn:160, desc:"Heritage hotel in the heart of Townsville with character rooms and fine dining" },
-    { name:"Grand Hotel Townsville — Deluxe Room", type:"Grand Hotel Townsville", ppn:220, desc:"Heritage hotel in the heart of Townsville with character rooms and fine dining" },
-    { name:"Grand Hotel Townsville — Suite", type:"Grand Hotel Townsville", ppn:300, desc:"Heritage hotel in the heart of Townsville with character rooms and fine dining" },
-    { name:"Island Leisure Resort — Magnetic Is. — Studio", type:"Island Leisure Resort", ppn:180, desc:"Relaxed island resort at Horseshoe Bay with pool and tropical gardens" },
-    { name:"Island Leisure Resort — Magnetic Is. — 1-Bed Unit", type:"Island Leisure Resort", ppn:250, desc:"Relaxed island resort at Horseshoe Bay with pool and tropical gardens" },
-    { name:"Island Leisure Resort — Magnetic Is. — 2-Bed Unit", type:"Island Leisure Resort", ppn:320, desc:"Relaxed island resort at Horseshoe Bay with pool and tropical gardens" },
-  ],
-  "Mission Beach": [
-    { name:"Castaways Resort & Spa — Garden Room", type:"Castaways Resort & Spa", ppn:200, desc:"Beachfront resort on Mission Beach with spa, pool, and Coral Sea views" },
-    { name:"Castaways Resort & Spa — Beachfront Room", type:"Castaways Resort & Spa", ppn:260, desc:"Beachfront resort on Mission Beach with spa, pool, and Coral Sea views" },
-    { name:"Castaways Resort & Spa — Suite", type:"Castaways Resort & Spa", ppn:380, desc:"Beachfront resort on Mission Beach with spa, pool, and Coral Sea views" },
-    { name:"Elandra Mission Beach — Rainforest Room", type:"Elandra Mission Beach", ppn:250, desc:"Boutique luxury retreat with stunning elevated ocean and rainforest views" },
-    { name:"Elandra Mission Beach — Ocean View Room", type:"Elandra Mission Beach", ppn:350, desc:"Boutique luxury retreat with stunning elevated ocean and rainforest views" },
-    { name:"Elandra Mission Beach — Penthouse", type:"Elandra Mission Beach", ppn:500, desc:"Boutique luxury retreat with stunning elevated ocean and rainforest views" },
-    { name:"Licuala Lodge — Rainforest Room", type:"Licuala Lodge", ppn:180, desc:"Intimate rainforest B&B with expert local hosting and cassowary spotting nearby" },
-    { name:"Licuala Lodge — Garden Suite", type:"Licuala Lodge", ppn:240, desc:"Intimate rainforest B&B with expert local hosting and cassowary spotting nearby" },
-    { name:"Wongalinga — Beach House", type:"Wongalinga", ppn:280, desc:"Private beach houses set between rainforest and ocean on Mission Beach" },
-    { name:"Wongalinga — Luxury Beach House", type:"Wongalinga", ppn:380, desc:"Private beach houses set between rainforest and ocean on Mission Beach" },
-    { name:"Beachcomber Coconut Holiday Park — Cabin — Cabin", type:"Beachcomber Coconut Village", ppn:140, desc:"Beachfront holiday park with cabins nestled among coconut palms" },
-    { name:"Beachcomber Coconut Holiday Park — Cabin — Deluxe Cabin", type:"Beachcomber Coconut Village", ppn:190, desc:"Beachfront holiday park with cabins nestled among coconut palms" },
-  ],
-  "Toowoomba": [
-    { name:"Vacy Hall Historic Guesthouse — Heritage Room", type:"Vacy Hall Historic Guesthouse", ppn:180, desc:"Heritage-listed 1890s guesthouse with manicured gardens in the heart of Toowoomba" },
-    { name:"Vacy Hall Historic Guesthouse — Deluxe Room", type:"Vacy Hall Historic Guesthouse", ppn:230, desc:"Heritage-listed 1890s guesthouse with manicured gardens in the heart of Toowoomba" },
-    { name:"Vacy Hall Historic Guesthouse — Suite", type:"Vacy Hall Historic Guesthouse", ppn:300, desc:"Heritage-listed 1890s guesthouse with manicured gardens in the heart of Toowoomba" },
-    { name:"Mercure Toowoomba — Standard Room", type:"Mercure Toowoomba", ppn:160, desc:"Contemporary hotel in central Toowoomba with restaurant and conference facilities" },
-    { name:"Mercure Toowoomba — Superior Room", type:"Mercure Toowoomba", ppn:200, desc:"Contemporary hotel in central Toowoomba with restaurant and conference facilities" },
-    { name:"Mercure Toowoomba — Suite", type:"Mercure Toowoomba", ppn:280, desc:"Contemporary hotel in central Toowoomba with restaurant and conference facilities" },
-    { name:"Quest Toowoomba — Studio", type:"Quest Toowoomba", ppn:180, desc:"Modern self-contained apartments ideal for extended stays in the Garden City" },
-    { name:"Quest Toowoomba — 1-Bed Apartment", type:"Quest Toowoomba", ppn:240, desc:"Modern self-contained apartments ideal for extended stays in the Garden City" },
-    { name:"Quest Toowoomba — 2-Bed Apartment", type:"Quest Toowoomba", ppn:320, desc:"Modern self-contained apartments ideal for extended stays in the Garden City" },
-    { name:"Picnic Point Villas — 1-Bed Villa", type:"Picnic Point Villas", ppn:200, desc:"Private villas near Picnic Point with panoramic views of the Lockyer Valley" },
-    { name:"Picnic Point Villas — 2-Bed Villa", type:"Picnic Point Villas", ppn:280, desc:"Private villas near Picnic Point with panoramic views of the Lockyer Valley" },
-    { name:"Downs Motor Inn — Standard Room", type:"Downs Motor Inn", ppn:130, desc:"Well-appointed hotel in central Toowoomba with comfortable rooms and parking" },
-    { name:"Downs Motor Inn — Deluxe Room", type:"Downs Motor Inn", ppn:170, desc:"Well-appointed hotel in central Toowoomba with comfortable rooms and parking" },
-  ],
-  "Roma": [
-    { name:"Roma Explorers Inn — Standard Room", type:"Roma Explorers Inn", ppn:140, desc:"Roma's premier accommodation with pool, restaurant, and outback hospitality" },
-    { name:"Roma Explorers Inn — Deluxe Room", type:"Roma Explorers Inn", ppn:180, desc:"Roma's premier accommodation with pool, restaurant, and outback hospitality" },
-    { name:"Roma Explorers Inn — Family Suite", type:"Roma Explorers Inn", ppn:240, desc:"Roma's premier accommodation with pool, restaurant, and outback hospitality" },
-    { name:"Roma Central Motel — Standard Room", type:"Roma Central Motel", ppn:120, desc:"Central Roma motel with well-appointed rooms and easy access to town" },
-    { name:"Roma Central Motel — Queen Room", type:"Roma Central Motel", ppn:150, desc:"Central Roma motel with well-appointed rooms and easy access to town" },
-    { name:"Roma Central Motel — Family Room", type:"Roma Central Motel", ppn:190, desc:"Central Roma motel with well-appointed rooms and easy access to town" },
-    { name:"Overlander Hotel Motel — Standard Room", type:"Overlander Hotel Motel", ppn:130, desc:"Classic outback pub accommodation with character and country hospitality" },
-    { name:"Overlander Hotel Motel — Deluxe Room", type:"Overlander Hotel Motel", ppn:170, desc:"Classic outback pub accommodation with character and country hospitality" },
-    { name:"Roma Big Rig Tourist Park — Cabin — Standard Cabin", type:"Big Rig Tourist Park Roma", ppn:100, desc:"Cabins adjacent to the Big Rig Night Show attraction with pool and camp kitchen" },
-    { name:"Roma Big Rig Tourist Park — Cabin — Deluxe Cabin", type:"Big Rig Tourist Park Roma", ppn:150, desc:"Cabins adjacent to the Big Rig Night Show attraction with pool and camp kitchen" },
-    { name:"StarLodge Motor Inn — Standard Room", type:"StarLodge Motor Inn", ppn:120, desc:"Comfortable accommodation in Roma with modern amenities and quiet setting" },
-    { name:"StarLodge Motor Inn — Queen Room", type:"StarLodge Motor Inn", ppn:150, desc:"Comfortable accommodation in Roma with modern amenities and quiet setting" },
-  ],
-  "Mitchell & Charleville": [
-    { name:"Hotel Corones — Heritage Room", type:"Hotel Corones", ppn:160, desc:"Iconic 1920s heritage hotel with the famous grand staircase — a must-stay outback experience" },
-    { name:"Hotel Corones — Heritage Suite", type:"Hotel Corones", ppn:220, desc:"Iconic 1920s heritage hotel with the famous grand staircase — a must-stay outback experience" },
-    { name:"Hotel Corones — Corones Suite", type:"Hotel Corones", ppn:300, desc:"Iconic 1920s heritage hotel with the famous grand staircase — a must-stay outback experience" },
-    { name:"Mulga Country Motor Inn — Standard Room", type:"Mulga Country Motor Inn", ppn:130, desc:"Modern motor inn with pool and restaurant in the heart of Charleville" },
-    { name:"Mulga Country Motor Inn — Deluxe Room", type:"Mulga Country Motor Inn", ppn:170, desc:"Modern motor inn with pool and restaurant in the heart of Charleville" },
-    { name:"Charleville Motel — Standard Room", type:"Charleville Motel", ppn:110, desc:"Comfortable motel accommodation in central Charleville" },
-    { name:"Charleville Motel — Queen Room", type:"Charleville Motel", ppn:140, desc:"Comfortable motel accommodation in central Charleville" },
-    { name:"Evening Star Tourist Park — Cabin — Standard Cabin", type:"Evening Star Charleville", ppn:100, desc:"Cabins near the Charleville Cosmos Centre with peaceful outback setting" },
-    { name:"Evening Star Tourist Park — Cabin — Deluxe Cabin", type:"Evening Star Charleville", ppn:140, desc:"Cabins near the Charleville Cosmos Centre with peaceful outback setting" },
-    { name:"Warrego Motel — Standard Room", type:"Warrego Motel", ppn:120, desc:"Comfortable outback motel in central Charleville with pool and parking" },
-    { name:"Warrego Motel — Deluxe Room", type:"Warrego Motel", ppn:150, desc:"Comfortable outback motel in central Charleville with pool and parking" },
-  ],
-  "Blackall": [
-    { name:"Acacia Motor Inn — Standard Room", type:"Acacia Motor Inn", ppn:130, desc:"Blackall's premier accommodation with pool, restaurant, and genuine outback welcome" },
-    { name:"Acacia Motor Inn — Deluxe Room", type:"Acacia Motor Inn", ppn:170, desc:"Blackall's premier accommodation with pool, restaurant, and genuine outback welcome" },
-    { name:"Acacia Motor Inn — Family Room", type:"Acacia Motor Inn", ppn:200, desc:"Blackall's premier accommodation with pool, restaurant, and genuine outback welcome" },
-    { name:"Blackall Motor Inn — Standard Room", type:"Blackall Motor Inn", ppn:110, desc:"Comfortable motor inn in central Blackall with well-appointed rooms" },
-    { name:"Blackall Motor Inn — Queen Room", type:"Blackall Motor Inn", ppn:140, desc:"Comfortable motor inn in central Blackall with well-appointed rooms" },
-    { name:"Barcoo River Hotel — Pub Room", type:"Barcoo River Hotel", ppn:90, desc:"Classic outback pub with character rooms on the banks of the Barcoo River" },
-    { name:"Barcoo River Hotel — Deluxe Room", type:"Barcoo River Hotel", ppn:130, desc:"Classic outback pub with character rooms on the banks of the Barcoo River" },
-    { name:"Blackall Woolscour Cabins — Cabin", type:"Blackall Woolscour Cabins", ppn:120, desc:"Heritage cabins adjacent to the historic Blackall Woolscour — Australia's last steam-driven woolscour" },
-    { name:"Blackall Woolscour Cabins — Deluxe Cabin", type:"Blackall Woolscour Cabins", ppn:160, desc:"Heritage cabins adjacent to the historic Blackall Woolscour — Australia's last steam-driven woolscour" },
-    { name:"All Seasons Outback Blackall — Standard Room", type:"All Seasons Outback Blackall", ppn:120, desc:"Modern motel accommodation with consistent quality in central Blackall" },
-    { name:"All Seasons Outback Blackall — Queen Room", type:"All Seasons Outback Blackall", ppn:150, desc:"Modern motel accommodation with consistent quality in central Blackall" },
-  ],
-  "Longreach": [
-    { name:"Mitchell Grass Retreat — Luxury Tent", type:"Mitchell Grass Retreat", ppn:250, desc:"Luxury glamping under outback skies with elevated safari tents and gourmet dining" },
-    { name:"Mitchell Grass Retreat — Premium Tent", type:"Mitchell Grass Retreat", ppn:350, desc:"Luxury glamping under outback skies with elevated safari tents and gourmet dining" },
-    { name:"Mitchell Grass Retreat — Homestead Suite", type:"Mitchell Grass Retreat", ppn:450, desc:"Luxury glamping under outback skies with elevated safari tents and gourmet dining" },
-    { name:"Albert Park Motor Inn — Standard Room", type:"Albert Park Motor Inn", ppn:150, desc:"Central Longreach hotel with pool, restaurant, and walking distance to the Qantas Museum" },
-    { name:"Albert Park Motor Inn — Deluxe Room", type:"Albert Park Motor Inn", ppn:200, desc:"Central Longreach hotel with pool, restaurant, and walking distance to the Qantas Museum" },
-    { name:"Albert Park Motor Inn — Family Suite", type:"Albert Park Motor Inn", ppn:260, desc:"Central Longreach hotel with pool, restaurant, and walking distance to the Qantas Museum" },
-    { name:"Longreach Motor Inn — Standard Room", type:"Longreach Motor Inn", ppn:130, desc:"Central Longreach motor inn with pool and restaurant, walking distance to attractions" },
-    { name:"Longreach Motor Inn — Queen Room", type:"Longreach Motor Inn", ppn:170, desc:"Central Longreach motor inn with pool and restaurant, walking distance to attractions" },
-    { name:"Longreach Motor Inn — Family Room", type:"Longreach Motor Inn", ppn:220, desc:"Central Longreach motor inn with pool and restaurant, walking distance to attractions" },
-    { name:"Saltbush Retreat — Cabin", type:"Saltbush Retreat", ppn:180, desc:"Peaceful bush retreat on the outskirts of Longreach with native gardens and stargazing" },
-    { name:"Saltbush Retreat — Luxury Cabin", type:"Saltbush Retreat", ppn:250, desc:"Peaceful bush retreat on the outskirts of Longreach with native gardens and stargazing" },
-    { name:"Longreach Tourist Park — Cabin — Standard Cabin", type:"Longreach Tourist Park", ppn:100, desc:"Family-friendly park with pool and camp kitchen near central Longreach" },
-    { name:"Longreach Tourist Park — Cabin — Deluxe Cabin", type:"Longreach Tourist Park", ppn:150, desc:"Family-friendly park with pool and camp kitchen near central Longreach" },
-    { name:"Longreach Tourist Park — Cabin — Villa", type:"Longreach Tourist Park", ppn:200, desc:"Family-friendly park with pool and camp kitchen near central Longreach" },
-  ],
-  "Longreach (return)": [
-    { name:"Mitchell Grass Retreat — Luxury Tent", type:"Mitchell Grass Retreat", ppn:250, desc:"Luxury glamping under outback skies with elevated safari tents and gourmet dining" },
-    { name:"Mitchell Grass Retreat — Premium Tent", type:"Mitchell Grass Retreat", ppn:350, desc:"Luxury glamping under outback skies with elevated safari tents and gourmet dining" },
-    { name:"Mitchell Grass Retreat — Homestead Suite", type:"Mitchell Grass Retreat", ppn:450, desc:"Luxury glamping under outback skies with elevated safari tents and gourmet dining" },
-    { name:"Albert Park Motor Inn — Standard Room", type:"Albert Park Motor Inn", ppn:150, desc:"Central Longreach hotel with pool, restaurant, and walking distance to the Qantas Museum" },
-    { name:"Albert Park Motor Inn — Deluxe Room", type:"Albert Park Motor Inn", ppn:200, desc:"Central Longreach hotel with pool, restaurant, and walking distance to the Qantas Museum" },
-    { name:"Albert Park Motor Inn — Family Suite", type:"Albert Park Motor Inn", ppn:260, desc:"Central Longreach hotel with pool, restaurant, and walking distance to the Qantas Museum" },
-    { name:"Longreach Motor Inn — Standard Room", type:"Longreach Motor Inn", ppn:130, desc:"Central Longreach motor inn with pool and restaurant, walking distance to attractions" },
-    { name:"Longreach Motor Inn — Queen Room", type:"Longreach Motor Inn", ppn:170, desc:"Central Longreach motor inn with pool and restaurant, walking distance to attractions" },
-    { name:"Longreach Motor Inn — Family Room", type:"Longreach Motor Inn", ppn:220, desc:"Central Longreach motor inn with pool and restaurant, walking distance to attractions" },
-    { name:"Saltbush Retreat — Cabin", type:"Saltbush Retreat", ppn:180, desc:"Peaceful bush retreat on the outskirts of Longreach with native gardens and stargazing" },
-    { name:"Saltbush Retreat — Luxury Cabin", type:"Saltbush Retreat", ppn:250, desc:"Peaceful bush retreat on the outskirts of Longreach with native gardens and stargazing" },
-    { name:"Longreach Tourist Park — Cabin — Standard Cabin", type:"Longreach Tourist Park", ppn:100, desc:"Family-friendly park with pool and camp kitchen near central Longreach" },
-    { name:"Longreach Tourist Park — Cabin — Deluxe Cabin", type:"Longreach Tourist Park", ppn:150, desc:"Family-friendly park with pool and camp kitchen near central Longreach" },
-    { name:"Longreach Tourist Park — Cabin — Villa", type:"Longreach Tourist Park", ppn:200, desc:"Family-friendly park with pool and camp kitchen near central Longreach" },
-  ],
-  "Winton": [
-    { name:"North Gregory Hotel — Heritage Room", type:"North Gregory Hotel", ppn:150, desc:"Where Waltzing Matilda was first performed — heritage outback pub with genuine character" },
-    { name:"North Gregory Hotel — Deluxe Room", type:"North Gregory Hotel", ppn:200, desc:"Where Waltzing Matilda was first performed — heritage outback pub with genuine character" },
-    { name:"North Gregory Hotel — Gregory Suite", type:"North Gregory Hotel", ppn:280, desc:"Where Waltzing Matilda was first performed — heritage outback pub with genuine character" },
-    { name:"Boulder Opal Motor Inn — Standard Room", type:"Boulder Opal Motor Inn", ppn:130, desc:"Winton's premier motel with pool and comfortable rooms in the dinosaur capital" },
-    { name:"Boulder Opal Motor Inn — Deluxe Room", type:"Boulder Opal Motor Inn", ppn:170, desc:"Winton's premier motel with pool and comfortable rooms in the dinosaur capital" },
-    { name:"Boulder Opal Motor Inn — Family Suite", type:"Boulder Opal Motor Inn", ppn:220, desc:"Winton's premier motel with pool and comfortable rooms in the dinosaur capital" },
-    { name:"Matilda Country Tourist Park — Cabin — Standard Cabin", type:"Matilda Country Winton", ppn:100, desc:"Family-friendly park in Winton with cabins and outback atmosphere" },
-    { name:"Matilda Country Tourist Park — Cabin — Deluxe Cabin", type:"Matilda Country Winton", ppn:140, desc:"Family-friendly park in Winton with cabins and outback atmosphere" },
-    { name:"Pelican Waters Caravan Park — Cabin — Cabin", type:"Pelican Waters Winton", ppn:90, desc:"Relaxed park accommodation with pool and shaded sites in central Winton" },
-    { name:"Pelican Waters Caravan Park — Cabin — Deluxe Cabin", type:"Pelican Waters Winton", ppn:130, desc:"Relaxed park accommodation with pool and shaded sites in central Winton" },
-    { name:"Winton Outback Motel — Standard Room", type:"Winton Outback Motel", ppn:110, desc:"Comfortable motel in central Winton close to the Australian Age of Dinosaurs" },
-    { name:"Winton Outback Motel — Queen Room", type:"Winton Outback Motel", ppn:140, desc:"Comfortable motel in central Winton close to the Australian Age of Dinosaurs" },
-  ],
-  "Carnarvon Gorge": [
-    { name:"Carnarvon Gorge Wilderness Lodge — Lodge Room", type:"Carnarvon Gorge Wilderness Lodge", ppn:350, desc:"Premium bush lodge at the gorge entrance with guided walks and gourmet dining included" },
-    { name:"Carnarvon Gorge Wilderness Lodge — Deluxe Lodge", type:"Carnarvon Gorge Wilderness Lodge", ppn:420, desc:"Premium bush lodge at the gorge entrance with guided walks and gourmet dining included" },
-    { name:"Carnarvon Gorge Wilderness Lodge — Premium Suite", type:"Carnarvon Gorge Wilderness Lodge", ppn:500, desc:"Premium bush lodge at the gorge entrance with guided walks and gourmet dining included" },
-    { name:"Takarakka Bush Resort — Safari Tent", type:"Takarakka Bush Resort", ppn:150, desc:"Private riverside resort with safari tents, bush cabins, and abundant wildlife" },
-    { name:"Takarakka Bush Resort — Bush Cabin", type:"Takarakka Bush Resort", ppn:200, desc:"Private riverside resort with safari tents, bush cabins, and abundant wildlife" },
-    { name:"Takarakka Bush Resort — Riverside Cabin", type:"Takarakka Bush Resort", ppn:280, desc:"Private riverside resort with safari tents, bush cabins, and abundant wildlife" },
-    { name:"Breeze Holiday Parks — Cabin — Standard Cabin", type:"Breeze Holiday Parks", ppn:140, desc:"Year-round holiday park at Carnarvon Gorge with camp kitchen and legendary bush bar" },
-    { name:"Breeze Holiday Parks — Cabin — Deluxe Cabin", type:"Breeze Holiday Parks", ppn:200, desc:"Year-round holiday park at Carnarvon Gorge with camp kitchen and legendary bush bar" },
-    { name:"Breeze Holiday Parks — Cabin — Family Villa", type:"Breeze Holiday Parks", ppn:280, desc:"Year-round holiday park at Carnarvon Gorge with camp kitchen and legendary bush bar" },
-    { name:"Carnarvon Gorge Discovery Park — Cabin", type:"Carnarvon Gorge Discovery Park", ppn:130, desc:"Comfortable cabin accommodation with easy access to gorge walking trails" },
-    { name:"Carnarvon Gorge Discovery Park — Deluxe Cabin", type:"Carnarvon Gorge Discovery Park", ppn:180, desc:"Comfortable cabin accommodation with easy access to gorge walking trails" },
-    { name:"Sandstone Park Carnarvon Gorge — Safari Tent", type:"Sandstone Park Carnarvon Gorge", ppn:120, desc:"Intimate eco-retreat with safari tents and cabins in a private bush setting" },
-    { name:"Sandstone Park Carnarvon Gorge — Eco Cabin", type:"Sandstone Park Carnarvon Gorge", ppn:180, desc:"Intimate eco-retreat with safari tents and cabins in a private bush setting" },
-  ],
-  "Emerald & Gemfields": [
-    { name:"Emerald Maraboon Motor Inn — Standard Room", type:"Emerald Maraboon Motor Inn", ppn:140, desc:"Emerald's premier motel with pool and central location in the gemfields region" },
-    { name:"Emerald Maraboon Motor Inn — Deluxe Room", type:"Emerald Maraboon Motor Inn", ppn:180, desc:"Emerald's premier motel with pool and central location in the gemfields region" },
-    { name:"Emerald Maraboon Motor Inn — Suite", type:"Emerald Maraboon Motor Inn", ppn:250, desc:"Emerald's premier motel with pool and central location in the gemfields region" },
-    { name:"Quest Emerald — Studio", type:"Quest Emerald", ppn:170, desc:"Modern self-contained apartments in central Emerald with contemporary fitout" },
-    { name:"Quest Emerald — 1-Bed Apartment", type:"Quest Emerald", ppn:220, desc:"Modern self-contained apartments in central Emerald with contemporary fitout" },
-    { name:"Quest Emerald — 2-Bed Apartment", type:"Quest Emerald", ppn:300, desc:"Modern self-contained apartments in central Emerald with contemporary fitout" },
-    { name:"Emerald Star Hotel — Standard Room", type:"Emerald Star Hotel", ppn:120, desc:"Heritage pub in central Emerald with character rooms and local dining" },
-    { name:"Emerald Star Hotel — Deluxe Room", type:"Emerald Star Hotel", ppn:160, desc:"Heritage pub in central Emerald with character rooms and local dining" },
-    { name:"Rubyvale Gem Gallery — Accommodation — Fossicker's Cabin", type:"Rubyvale Gem Gallery", ppn:130, desc:"Character cabins at the fossicking fields — dig for sapphires right at your doorstep" },
-    { name:"Rubyvale Gem Gallery — Accommodation — Gem Cabin", type:"Rubyvale Gem Gallery", ppn:170, desc:"Character cabins at the fossicking fields — dig for sapphires right at your doorstep" },
-    { name:"Sapphire Retreat — Studio Cabin", type:"Sapphire Retreat", ppn:140, desc:"Peaceful retreat near Rubyvale surrounded by natural bushland and gemfield country" },
-    { name:"Sapphire Retreat — Family Cabin", type:"Sapphire Retreat", ppn:200, desc:"Peaceful retreat near Rubyvale surrounded by natural bushland and gemfield country" },
-  ],
-  "Rubyvale & Gemfields": [
-    { name:"Emerald Maraboon Motor Inn — Standard Room", type:"Emerald Maraboon Motor Inn", ppn:140, desc:"Emerald's premier motel with pool and central location in the gemfields region" },
-    { name:"Emerald Maraboon Motor Inn — Deluxe Room", type:"Emerald Maraboon Motor Inn", ppn:180, desc:"Emerald's premier motel with pool and central location in the gemfields region" },
-    { name:"Emerald Maraboon Motor Inn — Suite", type:"Emerald Maraboon Motor Inn", ppn:250, desc:"Emerald's premier motel with pool and central location in the gemfields region" },
-    { name:"Quest Emerald — Studio", type:"Quest Emerald", ppn:170, desc:"Modern self-contained apartments in central Emerald with contemporary fitout" },
-    { name:"Quest Emerald — 1-Bed Apartment", type:"Quest Emerald", ppn:220, desc:"Modern self-contained apartments in central Emerald with contemporary fitout" },
-    { name:"Quest Emerald — 2-Bed Apartment", type:"Quest Emerald", ppn:300, desc:"Modern self-contained apartments in central Emerald with contemporary fitout" },
-    { name:"Emerald Star Hotel — Standard Room", type:"Emerald Star Hotel", ppn:120, desc:"Heritage pub in central Emerald with character rooms and local dining" },
-    { name:"Emerald Star Hotel — Deluxe Room", type:"Emerald Star Hotel", ppn:160, desc:"Heritage pub in central Emerald with character rooms and local dining" },
-    { name:"Rubyvale Gem Gallery — Accommodation — Fossicker's Cabin", type:"Rubyvale Gem Gallery", ppn:130, desc:"Character cabins at the fossicking fields — dig for sapphires right at your doorstep" },
-    { name:"Rubyvale Gem Gallery — Accommodation — Gem Cabin", type:"Rubyvale Gem Gallery", ppn:170, desc:"Character cabins at the fossicking fields — dig for sapphires right at your doorstep" },
-    { name:"Sapphire Retreat — Studio Cabin", type:"Sapphire Retreat", ppn:140, desc:"Peaceful retreat near Rubyvale surrounded by natural bushland and gemfield country" },
-    { name:"Sapphire Retreat — Family Cabin", type:"Sapphire Retreat", ppn:200, desc:"Peaceful retreat near Rubyvale surrounded by natural bushland and gemfield country" },
-  ],
-  "Rockhampton": [
-    { name:"Empire Apartment Hotel — Studio", type:"Empire Apartment Hotel", ppn:180, desc:"Heritage-listed building with contemporary apartments — Rockhampton's standout property" },
-    { name:"Empire Apartment Hotel — 1-Bed Apartment", type:"Empire Apartment Hotel", ppn:250, desc:"Heritage-listed building with contemporary apartments — Rockhampton's standout property" },
-    { name:"Empire Apartment Hotel — 2-Bed Apartment", type:"Empire Apartment Hotel", ppn:350, desc:"Heritage-listed building with contemporary apartments — Rockhampton's standout property" },
-    { name:"Quest Rockhampton — Studio", type:"Quest Rockhampton", ppn:170, desc:"Modern self-contained apartments in the CBD with contemporary design" },
-    { name:"Quest Rockhampton — 1-Bed Apartment", type:"Quest Rockhampton", ppn:230, desc:"Modern self-contained apartments in the CBD with contemporary design" },
-    { name:"Quest Rockhampton — 2-Bed Apartment", type:"Quest Rockhampton", ppn:300, desc:"Modern self-contained apartments in the CBD with contemporary design" },
-    { name:"Travelodge Rockhampton — Standard Room", type:"Travelodge Rockhampton", ppn:140, desc:"Central hotel with pool and river proximity in the heart of Rocky" },
-    { name:"Travelodge Rockhampton — Deluxe Room", type:"Travelodge Rockhampton", ppn:180, desc:"Central hotel with pool and river proximity in the heart of Rocky" },
-    { name:"Travelodge Rockhampton — Suite", type:"Travelodge Rockhampton", ppn:250, desc:"Central hotel with pool and river proximity in the heart of Rocky" },
-    { name:"Mercure Rockhampton — Standard Room", type:"Mercure Rockhampton", ppn:150, desc:"Riverfront hotel with restaurant and views over the Fitzroy River" },
-    { name:"Mercure Rockhampton — Superior Room", type:"Mercure Rockhampton", ppn:200, desc:"Riverfront hotel with restaurant and views over the Fitzroy River" },
-    { name:"Mercure Rockhampton — Suite", type:"Mercure Rockhampton", ppn:280, desc:"Riverfront hotel with restaurant and views over the Fitzroy River" },
-    { name:"Heritage Hotel Rockhampton — Heritage Room", type:"Heritage Hotel Rockhampton", ppn:130, desc:"Heritage character hotel in central Rockhampton with period features and charm" },
-    { name:"Heritage Hotel Rockhampton — Deluxe Room", type:"Heritage Hotel Rockhampton", ppn:170, desc:"Heritage character hotel in central Rockhampton with period features and charm" },
-    { name:"Heritage Hotel Rockhampton — Suite", type:"Heritage Hotel Rockhampton", ppn:230, desc:"Heritage character hotel in central Rockhampton with period features and charm" },
   ],
   "Byron Bay": [
     { name:"Crystalbrook Byron — Byron Room", type:"Crystalbrook Byron", ppn:350, desc:"Luxury rainforest retreat in the Byron hinterland with spa, restaurant, and sustainable design" },
@@ -559,85 +281,56 @@ const PROPERTIES = {
     { name:"Yamba Shores Tavern — Rooms — Standard Room", type:"Yamba Shores Tavern", ppn:140, desc:"Central pub accommodation in the heart of Yamba's dining and shopping precinct" },
     { name:"Yamba Shores Tavern — Rooms — Deluxe Room", type:"Yamba Shores Tavern", ppn:180, desc:"Central pub accommodation in the heart of Yamba's dining and shopping precinct" },
   ],
-  "Newcastle": [
-    { name:"QT Newcastle — QT Room", type:"QT Newcastle", ppn:250, desc:"Boutique designer hotel in the Honeysuckle precinct with signature QT style and rooftop bar" },
-    { name:"QT Newcastle — QT King", type:"QT Newcastle", ppn:320, desc:"Boutique designer hotel in the Honeysuckle precinct with signature QT style and rooftop bar" },
-    { name:"QT Newcastle — QT Suite", type:"QT Newcastle", ppn:450, desc:"Boutique designer hotel in the Honeysuckle precinct with signature QT style and rooftop bar" },
-    { name:"Rydges Newcastle — Standard Room", type:"Rydges Newcastle", ppn:200, desc:"Central harbour-view hotel with rooftop pool and city dining at your doorstep" },
-    { name:"Rydges Newcastle — City View Room", type:"Rydges Newcastle", ppn:260, desc:"Central harbour-view hotel with rooftop pool and city dining at your doorstep" },
-    { name:"Rydges Newcastle — Suite", type:"Rydges Newcastle", ppn:380, desc:"Central harbour-view hotel with rooftop pool and city dining at your doorstep" },
-    { name:"Crystalbrook Kingsley — Urban Room", type:"Crystalbrook Kingsley", ppn:220, desc:"Heritage-listed building transformed into a luxury waterfront hotel with harbour views" },
-    { name:"Crystalbrook Kingsley — Harbour Room", type:"Crystalbrook Kingsley", ppn:300, desc:"Heritage-listed building transformed into a luxury waterfront hotel with harbour views" },
-    { name:"Crystalbrook Kingsley — Suite", type:"Crystalbrook Kingsley", ppn:420, desc:"Heritage-listed building transformed into a luxury waterfront hotel with harbour views" },
-    { name:"Novotel Newcastle Beach — Standard Room", type:"Novotel Newcastle Beach", ppn:200, desc:"Beachfront hotel on Newcastle Beach with ocean views and modern amenities" },
-    { name:"Novotel Newcastle Beach — Ocean View Room", type:"Novotel Newcastle Beach", ppn:280, desc:"Beachfront hotel on Newcastle Beach with ocean views and modern amenities" },
-    { name:"Novotel Newcastle Beach — Suite", type:"Novotel Newcastle Beach", ppn:380, desc:"Beachfront hotel on Newcastle Beach with ocean views and modern amenities" },
-    { name:"The Lucky Hotel — Boutique Room", type:"The Lucky Hotel", ppn:180, desc:"Heritage boutique pub with character rooms and one of Newcastle's best rooftop bars" },
-    { name:"The Lucky Hotel — Deluxe Room", type:"The Lucky Hotel", ppn:240, desc:"Heritage boutique pub with character rooms and one of Newcastle's best rooftop bars" },
+  "Toowoomba": [
+    { name:"Vacy Hall Historic Guesthouse — Heritage Room", type:"Vacy Hall Historic Guesthouse", ppn:180, desc:"Heritage-listed 1890s guesthouse with manicured gardens in the heart of Toowoomba" },
+    { name:"Vacy Hall Historic Guesthouse — Deluxe Room", type:"Vacy Hall Historic Guesthouse", ppn:230, desc:"Heritage-listed 1890s guesthouse with manicured gardens in the heart of Toowoomba" },
+    { name:"Vacy Hall Historic Guesthouse — Suite", type:"Vacy Hall Historic Guesthouse", ppn:300, desc:"Heritage-listed 1890s guesthouse with manicured gardens in the heart of Toowoomba" },
+    { name:"Mercure Toowoomba — Standard Room", type:"Mercure Toowoomba", ppn:160, desc:"Contemporary hotel in central Toowoomba with restaurant and conference facilities" },
+    { name:"Mercure Toowoomba — Superior Room", type:"Mercure Toowoomba", ppn:200, desc:"Contemporary hotel in central Toowoomba with restaurant and conference facilities" },
+    { name:"Mercure Toowoomba — Suite", type:"Mercure Toowoomba", ppn:280, desc:"Contemporary hotel in central Toowoomba with restaurant and conference facilities" },
+    { name:"Quest Toowoomba — Studio", type:"Quest Toowoomba", ppn:180, desc:"Modern self-contained apartments ideal for extended stays in the Garden City" },
+    { name:"Quest Toowoomba — 1-Bed Apartment", type:"Quest Toowoomba", ppn:240, desc:"Modern self-contained apartments ideal for extended stays in the Garden City" },
+    { name:"Quest Toowoomba — 2-Bed Apartment", type:"Quest Toowoomba", ppn:320, desc:"Modern self-contained apartments ideal for extended stays in the Garden City" },
+    { name:"Picnic Point Villas — 1-Bed Villa", type:"Picnic Point Villas", ppn:200, desc:"Private villas near Picnic Point with panoramic views of the Lockyer Valley" },
+    { name:"Picnic Point Villas — 2-Bed Villa", type:"Picnic Point Villas", ppn:280, desc:"Private villas near Picnic Point with panoramic views of the Lockyer Valley" },
+    { name:"Downs Motor Inn — Standard Room", type:"Downs Motor Inn", ppn:130, desc:"Well-appointed hotel in central Toowoomba with comfortable rooms and parking" },
+    { name:"Downs Motor Inn — Deluxe Room", type:"Downs Motor Inn", ppn:170, desc:"Well-appointed hotel in central Toowoomba with comfortable rooms and parking" },
   ],
-  "Stockton Beach & Port Stephens": [
-    { name:"Bannisters Port Stephens — Retreat Room", type:"Bannisters Port Stephens", ppn:300, desc:"Waterfront luxury with Rick Stein restaurant, infinity pool, and marina views" },
-    { name:"Bannisters Port Stephens — Marina Room", type:"Bannisters Port Stephens", ppn:400, desc:"Waterfront luxury with Rick Stein restaurant, infinity pool, and marina views" },
-    { name:"Bannisters Port Stephens — Penthouse", type:"Bannisters Port Stephens", ppn:550, desc:"Waterfront luxury with Rick Stein restaurant, infinity pool, and marina views" },
-    { name:"Anchorage Port Stephens — Pool View Room", type:"Anchorage Port Stephens", ppn:250, desc:"Marina resort with spa, pool, and water views in the heart of Nelson Bay" },
-    { name:"Anchorage Port Stephens — Marina View Room", type:"Anchorage Port Stephens", ppn:320, desc:"Marina resort with spa, pool, and water views in the heart of Nelson Bay" },
-    { name:"Anchorage Port Stephens — Suite", type:"Anchorage Port Stephens", ppn:420, desc:"Marina resort with spa, pool, and water views in the heart of Nelson Bay" },
-    { name:"Oaks Pacific Blue Resort — 1-Bed Apartment", type:"Oaks Pacific Blue Resort", ppn:200, desc:"Resort-style living with golf course, multiple pools, and family amenities" },
-    { name:"Oaks Pacific Blue Resort — 2-Bed Apartment", type:"Oaks Pacific Blue Resort", ppn:300, desc:"Resort-style living with golf course, multiple pools, and family amenities" },
-    { name:"Oaks Pacific Blue Resort — 3-Bed Apartment", type:"Oaks Pacific Blue Resort", ppn:400, desc:"Resort-style living with golf course, multiple pools, and family amenities" },
-    { name:"Soldiers Point Marina — Marina Room", type:"Soldiers Point Marina", ppn:220, desc:"Quiet waterfront accommodation on the peaceful side of Port Stephens" },
-    { name:"Soldiers Point Marina — Deluxe Marina", type:"Soldiers Point Marina", ppn:300, desc:"Quiet waterfront accommodation on the peaceful side of Port Stephens" },
-    { name:"Shoal Bay Resort & Spa — Garden Room", type:"Shoal Bay Resort & Spa", ppn:180, desc:"Beachfront resort on Shoal Bay with spa, pool, and sweeping coastal views" },
-    { name:"Shoal Bay Resort & Spa — Ocean View Room", type:"Shoal Bay Resort & Spa", ppn:250, desc:"Beachfront resort on Shoal Bay with spa, pool, and sweeping coastal views" },
-    { name:"Shoal Bay Resort & Spa — Suite", type:"Shoal Bay Resort & Spa", ppn:350, desc:"Beachfront resort on Shoal Bay with spa, pool, and sweeping coastal views" },
+  "Stanthorpe & Granite Belt": [
+    { name:"Ridgemill Estate — Vineyard Cabin", type:"Ridgemill Estate", ppn:295, desc:"Detached cabin among vines with private deck, fire pit, and breakfast hamper option" },
+    { name:"Ridgemill Estate — Spa Cabin", type:"Ridgemill Estate", ppn:365, desc:"Upgraded vineyard cabin with outdoor spa bath and queen bed" },
+    { name:"Diamondvale Cottages — Creekside Cottage", type:"Diamondvale Cottages", ppn:285, desc:"Heritage-style cottage on Quart Pot Creek with wood fireplace, walk to town" },
+    { name:"Vineyard Cottages & Café — Garden Cottage", type:"Vineyard Cottages", ppn:310, desc:"Self-contained cottage at Ballandean with on-site chapel restaurant and gardens" },
+    { name:"Briar Rose Cottages — Heritage Cottage", type:"Briar Rose Cottages", ppn:265, desc:"English-country-style cottage in central Stanthorpe with cottage gardens" },
+    { name:"Hidden Creek Boutique Vineyard — Luxury Villa", type:"Hidden Creek Boutique Vineyard", ppn:450, desc:"High-end villa on working vineyard with full kitchen and Severn River views" },
+    { name:"The Vines Motel & Cottages — Apartment", type:"The Vines Motel & Cottages", ppn:140, desc:"Self-contained motel and cottage units in Stanthorpe — entry-level option within the route" },
   ],
-  "Hunter Valley": [
-    { name:"Spicers Vineyards Estate — Estate Room", type:"Spicers Vineyards Estate", ppn:380, desc:"Vineyard luxury retreat with hatted restaurant, cellar door, and Brokenback Range views" },
-    { name:"Spicers Vineyards Estate — Luxury Room", type:"Spicers Vineyards Estate", ppn:450, desc:"Vineyard luxury retreat with hatted restaurant, cellar door, and Brokenback Range views" },
-    { name:"Spicers Vineyards Estate — Suite", type:"Spicers Vineyards Estate", ppn:550, desc:"Vineyard luxury retreat with hatted restaurant, cellar door, and Brokenback Range views" },
-    { name:"Château Élan — Classic Room", type:"Château Élan", ppn:350, desc:"Resort, spa, and golf club set among Hunter Valley vineyards with fine dining" },
-    { name:"Château Élan — Deluxe Room", type:"Château Élan", ppn:450, desc:"Resort, spa, and golf club set among Hunter Valley vineyards with fine dining" },
-    { name:"Château Élan — Vintage Suite", type:"Château Élan", ppn:600, desc:"Resort, spa, and golf club set among Hunter Valley vineyards with fine dining" },
-    { name:"Crowne Plaza Hunter Valley — Standard Room", type:"Crowne Plaza Hunter Valley", ppn:220, desc:"Central Hunter Valley resort with pool, vineyard views, and wine region access" },
-    { name:"Crowne Plaza Hunter Valley — Vineyard View", type:"Crowne Plaza Hunter Valley", ppn:300, desc:"Central Hunter Valley resort with pool, vineyard views, and wine region access" },
-    { name:"Crowne Plaza Hunter Valley — Suite", type:"Crowne Plaza Hunter Valley", ppn:400, desc:"Central Hunter Valley resort with pool, vineyard views, and wine region access" },
-    { name:"Kirkton Park Hotel — Heritage Room", type:"Kirkton Park Hotel", ppn:200, desc:"Heritage estate with manicured gardens and elegant rooms in the Hunter Valley" },
-    { name:"Kirkton Park Hotel — Garden Room", type:"Kirkton Park Hotel", ppn:280, desc:"Heritage estate with manicured gardens and elegant rooms in the Hunter Valley" },
-    { name:"Kirkton Park Hotel — Suite", type:"Kirkton Park Hotel", ppn:380, desc:"Heritage estate with manicured gardens and elegant rooms in the Hunter Valley" },
-    { name:"Mercure Resort Hunter Valley — Standard Room", type:"Mercure Resort Hunter Valley", ppn:180, desc:"Family-friendly resort with golf course, pool, and vineyard surroundings" },
-    { name:"Mercure Resort Hunter Valley — Superior Room", type:"Mercure Resort Hunter Valley", ppn:240, desc:"Family-friendly resort with golf course, pool, and vineyard surroundings" },
-    { name:"Mercure Resort Hunter Valley — Suite", type:"Mercure Resort Hunter Valley", ppn:320, desc:"Family-friendly resort with golf course, pool, and vineyard surroundings" },
+  "Warwick & Killarney": [
+    { name:"Abbey of the Roses — Heritage Suite", type:"Abbey of the Roses", ppn:295, desc:"Restored 1891 sandstone convent with antique-furnished suites and on-site dining" },
+    { name:"Abbey of the Roses — Master Suite (with spa)", type:"Abbey of the Roses", ppn:395, desc:"Premium suite with claw-foot spa, four-poster bed, and garden views" },
+    { name:"Killarney View Cabins — Deluxe Spa Cabin", type:"Killarney View Cabins", ppn:215, desc:"Self-contained cabin with spa bath and Condamine Valley views, gateway to Queen Mary Falls" },
+    { name:"Kahlers Oasis Warwick — Premium Villa", type:"Kahlers Oasis Warwick", ppn:195, desc:"Modern self-contained villa, family-friendly, the best modern build in town" },
   ],
 };
 
 
 const PACKAGES = {
   kgari: { name:"K'gari Experience", days:5, db:300, stops:["Rainbow Beach & Inskip","Southern K'gari","75 Mile Beach","Northern K'gari","Hervey Bay (optional)"] },
+  moreton: { name:"Moreton Island Experience", days:5, db:400, stops:["Tangalooma","Cape Moreton & North"] },
   "tropical-north": { name:"Tropical North", days:7, db:1050, stops:["Cairns","Port Douglas & Mossman Gorge","Daintree Rainforest","Cape Tribulation","Atherton Tablelands","Cairns (return)"] },
-  "coastal-explorer": { name:"Coastal Explorer", days:21, db:2900, stops:["Rainbow Beach & Inskip","Southern K'gari","Bundaberg & 1770","Yeppoon & Capricorn Coast","Cape Hillsborough","Airlie Beach & Whitsundays","Townsville & Magnetic Island","Mission Beach","Cairns"] },
-  outback: { name:"Outback Queensland", days:21, db:2100, stops:["Toowoomba","Roma","Mitchell & Charleville","Blackall","Longreach","Winton","Carnarvon Gorge","Emerald & Gemfields","Rockhampton","Agnes Water & Bundaberg"] },
   whitsundays: { name:"Whitsundays", days:7, db:950, stops:["Airlie Beach","Cape Hillsborough","Mackay"] },
-  "outback-taster": { name:"Outback Taster", days:7, db:800, stops:["Longreach","Winton","Longreach (return)"] },
-  "capricorn-coast": { name:"Capricorn Coast", days:7, db:900, stops:["Yeppoon","1770 & Agnes Water","Rockhampton"] },
-  "carnarvon-gorge": { name:"Carnarvon Gorge", days:7, db:250, stops:["Rubyvale & Gemfields","Carnarvon Gorge","Blackall"] },
   "byron-bay": { name:"Byron Bay", days:5, db:900, stops:["Byron Bay","Ballina & Air Force Beach","Yamba"] },
-  "stockton-beach": { name:"Stockton Beach", days:7, db:1100, stops:["Newcastle","Stockton Beach & Port Stephens","Hunter Valley"] },
+  "southern-downs": { name:"Southern Downs Golf & Wine", days:7, db:600, stops:["Toowoomba","Stanthorpe & Granite Belt","Warwick & Killarney"] },
   custom: { name:"Custom Journey", days:7, db:0, stops:[] },
 };
 
-const RATE=1500, BOND=7500, ACCOM_CAP=450;
+const RATE=1500, BOND=7500, ACCOM_CAP=450, FLEET_FUEL=2000, VISA_BACKUP=500;
 const GUESTS=["1 adult","2 adults (couple)","3 adults","4 adults","1 adult + 1 child","1 adult + 2 children","1 adult + 3 children","2 adults + 1 child","2 adults + 2 children","2 adults + 3 children"];
 
-const visaCalc = b => {
-  const touringNights = b.stops.filter(s=>s.mode==="touring").reduce((a,s)=>a+s.nights,0);
-  const autoFuel = 1000;
-  const autoDining = touringNights * 200;
-  if (b.visaFuelOverride !== undefined || b.visaDiningOverride !== undefined) {
-    const fuel = b.visaFuelOverride ?? autoFuel;
-    const dining = b.visaDiningOverride ?? autoDining;
-    return { fuel, dining, total: fuel + dining };
-  }
-  return { fuel:autoFuel, dining:autoDining, total:autoFuel+autoDining };
+const cardCalc = b => {
+  const fleet = b.fleetFuelOverride ?? FLEET_FUEL;
+  const visa = b.visaBackupOverride ?? VISA_BACKUP;
+  return { fleet, visa, total: fleet + visa };
 };
 
 const accomSupCalc = b => {
@@ -814,7 +507,7 @@ export default function BookingApp() {
   if (view === "guest" && act) {
     const b = act;
     const pk = PACKAGES[b.packageId] || { name: "Custom", days: b.totalDays, db: 0 };
-    const v = visaCalc(b);
+    const v = cardCalc(b);
     const pomCostCalc = (b.bondOption||"none")==="assurance"?Math.min(38*b.totalDays,380):(b.bondOption||"none")==="complete"?Math.min(55*b.totalDays,550):0;
     const accomSup = accomSupCalc(b);
     const q = { days: b.totalDays, sub: b.totalDays * RATE, sup: b.supplements || 0, accom: accomSup, total: b.totalDays * RATE + (b.supplements || 0) + accomSup };
@@ -1171,7 +864,7 @@ export default function BookingApp() {
 
   /* ═══ ADMIN EDIT ═══ */
   if (view === "edit" && act) {
-    const b = act, pk = PACKAGES[b.packageId], v = visaCalc(b);
+    const b = act, pk = PACKAGES[b.packageId], v = cardCalc(b);
     const pomCost = (b.bondOption||"none")==="assurance"?Math.min(38*b.totalDays,380):(b.bondOption||"none")==="complete"?Math.min(55*b.totalDays,550):0;
     const accomSup = accomSupCalc(b);
     const q = { days:b.totalDays, sub:b.totalDays*RATE, sup:b.supplements||0, pom:pomCost, accom:accomSup, total:b.totalDays*RATE+(b.supplements||0)+pomCost+accomSup };
@@ -1367,16 +1060,16 @@ export default function BookingApp() {
             })}
           </div>
 
-          {/* Admin Controls — Visa, Bond, Ultra-Luxury */}
+          {/* Admin Controls — Cards, Bond, Ultra-Luxury */}
           <div style={{...S.cd,marginBottom:20}}>
             <h2 style={{fontFamily:sf,fontSize:22,fontWeight:500,marginBottom:16}}>Admin Controls</h2>
             <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:14}}>
-              <div><label style={S.lb}>Visa — Fuel ($)</label>
-                <input type="number" style={S.ip} value={b.visaFuelOverride ?? ""} placeholder="Auto: $1,000"
-                  onChange={e=>upd("visaFuelOverride",e.target.value?parseInt(e.target.value):undefined)}/></div>
-              <div><label style={S.lb}>Visa — Dining ($)</label>
-                <input type="number" style={S.ip} value={b.visaDiningOverride ?? ""} placeholder={`Auto: $${b.stops.filter(s=>s.mode==="touring").reduce((a,s)=>a+s.nights,0) * 200} ($200/day × touring nights)`}
-                  onChange={e=>upd("visaDiningOverride",e.target.value?parseInt(e.target.value):undefined)}/></div>
+              <div><label style={S.lb}>Fleet Fuel Card ($)</label>
+                <input type="number" style={S.ip} value={b.fleetFuelOverride ?? ""} placeholder="Auto: $2,000 (diesel-only, returned)"
+                  onChange={e=>upd("fleetFuelOverride",e.target.value?parseInt(e.target.value):undefined)}/></div>
+              <div><label style={S.lb}>Visa Backup ($)</label>
+                <input type="number" style={S.ip} value={b.visaBackupOverride ?? ""} placeholder="Auto: $500 (unrestricted, kept)"
+                  onChange={e=>upd("visaBackupOverride",e.target.value?parseInt(e.target.value):undefined)}/></div>
               <div><label style={S.lb}>Peace of Mind</label>
                 <select style={{...S.sl,borderColor:(b.bondOption&&b.bondOption!=="none")?gd:bd,color:(b.bondOption&&b.bondOption!=="none")?gd:dk}}
                   value={b.bondOption||"none"} onChange={e=>upd("bondOption",e.target.value)}>
@@ -1390,6 +1083,9 @@ export default function BookingApp() {
                 <input type="number" style={S.ip} value={b.supplements} onChange={e=>upd("supplements",parseInt(e.target.value)||0)}/></div>
               <div><label style={S.lb}>Notes</label>
                 <input style={S.ip} value={b.notes} onChange={e=>upd("notes",e.target.value)} placeholder="Internal notes"/></div>
+            </div>
+            <div style={{marginTop:12,padding:"10px 14px",background:sd,borderRadius:4,fontSize:11,color:md,lineHeight:1.5}}>
+              Two-card system: <strong>$2,000 fleet card</strong> (SHCo account, diesel-only, must be returned) + <strong>$500 Visa backup</strong> (unrestricted, hirer keeps). No additional funds if exhausted. Dinner is guest expense at curated restaurants.
             </div>
           </div>
 
@@ -1417,18 +1113,19 @@ export default function BookingApp() {
               </div>
             </div>
             <div style={{...S.cd,borderLeft:`3px solid ${gd}`}}>
-              <h3 style={{fontSize:10,fontWeight:700,letterSpacing:2,textTransform:"uppercase",color:gd,marginBottom:12}}>Visa Pre-load</h3>
+              <h3 style={{fontSize:10,fontWeight:700,letterSpacing:2,textTransform:"uppercase",color:gd,marginBottom:12}}>Card Allowances</h3>
               <div style={{display:"flex",justifyContent:"space-between",padding:"6px 0"}}>
-                <span style={{fontSize:13,color:md}}>Fuel{b.visaFuelOverride!==undefined?<span style={{color:gd}}> (override)</span>:""}</span>
-                <span>${v.fuel.toLocaleString()}</span>
+                <span style={{fontSize:13,color:md}}>Fleet Fuel Card{b.fleetFuelOverride!==undefined?<span style={{color:gd}}> (override)</span>:""}</span>
+                <span>${v.fleet.toLocaleString()}</span>
               </div>
               <div style={{display:"flex",justifyContent:"space-between",padding:"6px 0"}}>
-                <span style={{fontSize:13,color:md}}>Dining{b.visaDiningOverride!==undefined?<span style={{color:gd}}> (override)</span>:""}</span>
-                <span>${v.dining.toLocaleString()}</span>
+                <span style={{fontSize:13,color:md}}>Visa Backup{b.visaBackupOverride!==undefined?<span style={{color:gd}}> (override)</span>:""}</span>
+                <span>${v.visa.toLocaleString()}</span>
               </div>
               <div style={{display:"flex",justifyContent:"space-between",padding:"10px 0",marginTop:6,borderTop:`1px solid ${bd}`}}>
                 <span style={{fontWeight:600}}>Total</span><span style={{fontWeight:600,color:gd}}>${v.total.toLocaleString()}</span>
               </div>
+              <p style={{fontSize:10,color:lt,marginTop:10,lineHeight:1.5}}>Fleet card: SHCo account, diesel-only, returned. Visa: unrestricted backup, kept by hirer. Dinner = guest expense.</p>
             </div>
           </div>
 
