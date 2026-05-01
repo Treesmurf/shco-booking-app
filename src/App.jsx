@@ -317,9 +317,9 @@ const PROPERTIES = {
     { name:"The Calile Hotel — Standard Room", type:"The Calile Hotel", ppn:400, desc:"Boutique five-star resort hotel in James Street with poolside cabanas and Hellenika dining" },
     { name:"The Calile Hotel — Calile Suite", type:"The Calile Hotel", ppn:600, desc:"Premium suite with private terrace overlooking the resort pool and James Street precinct" },
     { name:"Emporium Hotel South Bank — Studio Suite", type:"Emporium Hotel South Bank", ppn:350, desc:"Boutique luxury hotel on the South Bank with rooftop infinity pool and curated art collection" },
-    { name:"Emporium Hotel South Bank — Royal Suite", type:"Emporium Hotel South Bank", ppn:550, desc:"Top-floor suite with panoramic river and city views, separate living and dining areas" },
+    { name:"Emporium Hotel South Bank — Exquisite Suite", type:"Emporium Hotel South Bank", ppn:550, desc:"Premium suite at Emporium South Bank with separate living area, marble bathroom, and city or river views" },
     { name:"Crystalbrook Vincent — Urban Room", type:"Crystalbrook Vincent", ppn:300, desc:"Boutique five-star hotel at Howard Smith Wharves with restaurant precinct on the doorstep" },
-    { name:"Crystalbrook Vincent — Eagle Pier Suite", type:"Crystalbrook Vincent", ppn:450, desc:"Premium suite with Story Bridge views and direct access to the Howard Smith Wharves dining strip" },
+    { name:"Crystalbrook Vincent — Two Bedroom River Luxe Suite", type:"Crystalbrook Vincent", ppn:450, desc:"Two-bedroom luxury suite with Story Bridge views and direct access to Howard Smith Wharves dining" },
     { name:"Sofitel Brisbane Central — Superior Room", type:"Sofitel Brisbane Central", ppn:350, desc:"Five-star French-inspired hotel above Brisbane Central Station with Cantina Bar & Grill" },
     { name:"The Westin Brisbane — Deluxe Room", type:"The Westin Brisbane", ppn:380, desc:"Five-star Mary Street hotel with heated outdoor pool, day spa, and signature Heavenly Bed" },
     { name:"Pullman Brisbane Airport — Deluxe Room", type:"Pullman Brisbane Airport", ppn:280, desc:"Premium airport hotel with direct shuttle, ideal for early international departures" },
@@ -329,7 +329,7 @@ const PROPERTIES = {
 
 const PACKAGES = {
   kgari: { name:"K'gari Experience", days:5, db:300, stops:["Rainbow Beach & Inskip Point","Southern K'gari","75 Mile Beach & East Coast","Northern K'gari","Hervey Bay (optional extension)"] },
-  moreton: { name:"Moreton Island Experience", days:5, db:400, stops:["Tangalooma","Cape Moreton & North"] },
+  moreton: { name:"Moreton Island Experience", days:5, db:400, stops:["Tangalooma","Cape Moreton & North","Brisbane (return)"] },
   "tropical-north": { name:"Tropical North", days:7, db:1050, stops:["Cairns","Port Douglas & Mossman Gorge","Daintree River & Rainforest","Cape Tribulation","Atherton Tablelands","Cairns (return)"] },
   whitsundays: { name:"Whitsundays", days:7, db:950, stops:["Airlie Beach","Cape Hillsborough","Mackay"] },
   "byron-bay": { name:"Byron Bay", days:5, db:900, stops:["Byron Bay","Ballina & Air Force Beach","Yamba"] },
